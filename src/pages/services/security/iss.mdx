@@ -1,0 +1,103 @@
+---
+title: Integrated Security Solutions
+description: Our Integrated Security Solutions for Organisations to ensure complete security 24X7
+layout: 'src/layouts/MarkdownLayout.astro'
+
+---
+
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon';
+
+export const items = [
+  { icon: 'tabler:shield-check', title: 'Static Guarding' },
+  { icon: 'tabler:building-factory-2', title: 'Facility Security' },
+  { icon: 'tabler:cctv', title: 'Electronic Surveillance' },
+  { icon: 'tabler:shield-lock', title: 'Electronic Security Solutions' },
+];
+
+
+<div class="lg:grid lg:grid-cols-5 md:grid md:grid-cols-5 sm:grid sm:grid-cols-2 mx-auto gap-4"> 
+  {
+    ['/1s.jpg', '/s.jpg', '/2s.webp', '/4s.jpg', '/5s.png'].map((imgPath, idx) => (
+      <Image
+        key={idx}
+        src={imgPath}
+        alt={`Security Image ${idx + 1}`}
+        width={250}
+        height={250}
+      />
+    ))
+  }
+</div>
+
+### Solutions tailored to your needs
+
+
+**Safeguard your business and assets with our Security Solutions designed to meet your requirements.**
+
+Our Security officers will ensure that no matter what the situation, they are more than capable to handle it in a moment's notice. We work with your team to develop solutions that align with your requirements and budget so that you can be rest assured 24X7.
+
+We will work with you to identify the right mix of Static Guarding along with Electronic Surveillance to ensure optimum service delivery at an economical cost.
+
+## Service Offerings
+
+
+
+## Frequently Asked Questions
+
+<div class="border border-gray-300 rounded-lg mt-8">
+  <details class="collapse collapse-arrow">
+    <summary class="collapse-title text-xl font-medium">Frequently Asked Questions related to our Security Services</summary>
+    <div class="collapse-content">
+      <ol class="list-decimal pl-6">
+        <li>
+          **What is an integrated security system?**
+          <br />
+          Integrated Security refers to the merging of traditional security practices with technologically enabled measures. It can also refer to a 'wide-angled' approach to security that incorporates physical security measures (such as guarding and CCTV), cyber security, health and safety, and business continuity. Refer to our blog post to understand in detail.
+        </li>
+
+        <li>
+          **What are the essential security services needed in a business?**
+          <br />
+          Key Security Services to invest in are:
+          <ul class="list-disc pl-6">
+            <li>Electronic Security</li>
+            <li>Property Surveillance</li>
+            <li>Access Control Systems</li>
+            <li>Cybersecurity</li>
+            <li>Video Analytics</li>
+            <li>Remote Monitoring</li>
+            <li>Security Personnel</li>
+          </ul>
+          We recommend hiring a professional Security company to undertake essential security services and avoid loss to your business. You can refer to our [blog post](/blog/security-Service) to understand more.
+        </li>
+
+        <li>
+          **What Special services will I have access to through an integrated security services company?**
+          <br />
+          You will get access to the following services:
+          <ul class="list-disc pl-6">
+            <li>Video Surveillance and Monitoring</li>
+            <li>Access Control Systems</li>
+            <li>Security Warning Systems</li>
+            <li>Video Analytics</li>
+            <li>Well Trained Security Personnel</li>
+          </ul>
+        </li>
+
+        <li>
+          **What are the benefits of an integrated security service?**
+          <br />
+          Integrated services offer a range of advantages:
+          <ul class="list-disc pl-6">
+            <li>Reduce Costs</li>
+            <li>Multiple services by a single Vendor</li>
+            <li>Service Efficiency</li>
+            <li>Easy Management</li>
+          </ul>
+          You can refer to our [blog post](/blog/security-Service) to understand more.
+        </li>
+      </ol>
+    </div>
+  </details>
+</div>

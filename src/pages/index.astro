@@ -13,6 +13,8 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Customers from '../assets/images/customers.webp';
 import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
 
 const metadata = {
   title: 'Knighthood',
@@ -153,7 +155,10 @@ stats={[
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
+
   </Content>
+  <center><button class="mx-auto mb-10"><a href="/whyus" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Why Customers Choose Us</a></a></button></center>
+
 
   <!-- Steps Widget ****************** -->
 
@@ -273,6 +278,42 @@ stats={[
                         Astro is a very interesting technology. Thanks.
                 `}
   />
+<!-- Testimonials Widget *********** -->
+
+<Testimonials
+title="What our Customers Say"
+subtitle="Discover what customers have to say about their experiences working with us."
+testimonials={[
+  {
+    testimonial: `Knighthood provided an outstanding security service even in the most challenging of locations. We were incredibly impressed with the quality of their service and dedication to meeting our needs.`,
+    name: 'Akash Trivedi',
+    job: 'Zonal Head - North (Proconnect Logistics)',
+    image: {
+      src: 'https://media.licdn.com/dms/image/C5103AQGKVXh5mxuLSw/profile-displayphoto-shrink_800_800/0/1519803501743?e=1722470400&v=beta&t=PZov-11bH337ggOD-gVP1RFXqf6-dWx-eHocTnONGg0',
+      alt: 'Akash Trivedi Image',
+    },
+  },
+  {
+    testimonial: `“When we shifted to Knighthood from a well renowned security player, we were able to save 10% on our costs without any reduction in service quality when it comes to security services. It was a great decision that has paid off for us in the long run.`,
+    name: 'Rajesh Singh',
+    job: 'Operations Head (SpiceXpress)',
+    image: {
+      src: 'https://media.licdn.com/dms/image/D4D03AQElZ7-h2vyicw/profile-displayphoto-shrink_400_400/0/1673163903505?e=1722470400&v=beta&t=LEmXSAP6LOZJhE67PIqXyIi8EBDAFNdy-6lhiC8oj_I',
+      alt: 'Rajesh Singh Image',
+    },
+  },
+  {
+    testimonial: `We were amazed at the speed of deployment of labour for warehouses across India that Knighthood provided. They were reliable and efficient, surpassing all of our expectations.`,
+    name: 'Ajay Kanwar',
+    job: 'COO (Holisol Logistics)',
+    image: {
+      src: 'https://media.licdn.com/dms/image/C4D03AQHOr7FJmkKV1A/profile-displayphoto-shrink_400_400/0/1622820246459?e=1722470400&v=beta&t=9amhNF1RkZDSrjU4R-NnblLVR75DDmoKN4-upE7StGs',
+      alt: 'Ajay Kanwar Image',
+    },
+  },
+  
+]}
+/>
 
   <!-- FAQs Widget ******************* -->
 
@@ -314,6 +355,7 @@ stats={[
     ]}
   />
 
+  
   <Features3
     title="Let us know how we can help"
     subtitle="We’re here to help and answer any question you might have."

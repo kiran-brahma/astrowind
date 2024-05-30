@@ -19,6 +19,9 @@ module.exports = {
       },
     },
   },
-  plugins: [typographyPlugin],
+  plugins: [
+    require('daisyui'),
+    typographyPlugin
+  ],
   darkMode: 'class',
 };

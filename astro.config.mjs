@@ -1,5 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+import react from '@astrojs/react';
 
 import { defineConfig, squooshImageService } from 'astro/config';
 
@@ -27,7 +28,7 @@ const whenExternalScripts = (items = []) =>
 export default defineConfig({
   output: 'static',
 
-  integrations: [
+  integrations: [react(),
     tailwind({
       applyBaseStyles: false,
     }),

@@ -1,0 +1,100 @@
+---
+title: Security Solutions
+description: Knighthood offers a range of Solutions to ensure your safety and security
+layout: 'src/layouts/MarkdownLayout.astro'
+
+---
+import { Image } from 'astro:assets';
+export const services = [
+  {
+    title: "Integrated Security Services",
+    image: "/guard.jpg",
+    description: "Specialised Manned Security Services ensuring top-notch reliable security 24X7",
+    href: "/services/security/iss",
+  },
+  {
+    title: "Electronic Security Services",
+    image: "/cctv-ware.webp",
+    description: "New Age Technology enabled Security Solutions",
+    href: "/services/security/ess",
+  },
+  {
+    title: "Housing Security Services",
+    image: "/housing.jpeg",
+    description: "Security Solutions for Individual Home Owners and Communities",
+    href: "/services/security/hss",
+  },
+];
+
+
+
+<br/>
+
+
+
+We are ISO 9001:2015 QMS certified and believes in total commitment to quality and customer satisfaction. We understand the sensitivity of security business and importance of providing professional expertise in accordance with the requirement and to the utmost satisfaction of our customers.
+
+We adopt a solutions focussed approach to all our services. We work with our customers to provide cost effective solutions rather than following a 
+standard solution for every customers. Our team has requisite experience across a diverse industries, allowing us to provide solutions that adhere to standard security 
+protocols while making appropriate changes that matter the most to our customers
+
+## Our Work in Numbers
+<br/>
+<center>
+<div className="stats stats-vertical lg:stats-horizontal shadow">
+  
+  <div className="stat">
+    <div className="stat-title">Customers</div>
+    <div className="stat-value">150+</div>
+  </div>
+  
+  <div className="stat">
+    <div className="stat-title">Total Security Personnel Deployed</div>
+    <div className="stat-value">7500+</div>
+  </div>
+  
+  <div className="stat">
+    <div className="stat-title">States with PSARA License</div>
+    <div className="stat-value">18+ Counting</div>
+  </div>
+  <div className="stat">
+    <div className="stat-title">SLA (Last 3 years)</div>
+    <div className="stat-value">99.3%</div>
+  </div>
+  
+</div>
+
+</center>
+
+## Our Solutions
+<br/>
+<section className="py-12">
+      <div className="container mx-auto">
+        <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-col rounded-lg shadow-xl overflow-hidden"
+            >
+              <a href={service.href}>
+                <img
+                  src={service.image}
+                  alt={`${service.title} Image`}
+                  className="w-full h-48 object-cover"
+                />
+              </a>
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-700">{service.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+## FAQ
+
+### [Frequently asked questions by our customers in relation to our security services](/services/security/FAQ-Guard)
+
+<br></br>

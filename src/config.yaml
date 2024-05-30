@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Knighthood
+  site: 'https://knighthood.co'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Knighthood
+    template: '%s — Knighthood'
+  description: "Security and Staffing Solutions for Business Across India."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Knighthood
     images:
       - url: '~/assets/images/default.png'
         width: 1200

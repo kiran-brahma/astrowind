@@ -1,0 +1,39 @@
+---
+const cities = [
+  { state: 'Uttar Pradesh', cities: ['Lucknow', 'Meerut', 'Kanpur', 'Agra', 'Prayagraj', 'Varanasi', 'Deoria'] },
+  { state: 'Punjab', cities: ['Chandigarh', 'Ludhiana', 'Amritsar', 'Jalandhar', 'Patiala', 'Bathinda', 'Firozpur', 'Hoshiarpur'] },
+  { state: 'Karnataka', cities: ['Bangalore', 'Mysore', 'Mangalore', 'Belgaum', 'Dharwad', 'Bellary', 'Hospet', 'Udipi'] },
+  { state: 'Maharastra', cities: ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Kolhapur', 'Auranagabad', 'Ahmednagar'] },
+  { state: 'Delhi NCR', cities: ['New Delhi', 'Gurgaon', 'Faridabad', 'Noida', 'Ghaziabad', 'Manesar'] },
+  { state: 'North East', cities: ['Guwahati', 'Dibrugarh', 'Agartala', 'Imphal', 'Shillong', 'Kohima'] },
+  { state: 'Madhya Pradesh', cities: ['Bhopal', 'Indore', 'Ujjain', 'Gwalior', 'Jabalpur', 'Dewas'] },
+  { state: 'Gujarat', cities: ['Ahmedabad', 'Gandhinagar', 'Vadodara', 'Surat', 'Rajkot'] },
+  { state: 'Telangana', cities: ['Hyderabad', 'Warangal', 'Karimnagar', 'Nizamabad'] },
+  { state: 'Andhra Pradesh', cities: ['Visakhapatnam', 'Vijaywada', 'Guntur', 'Nellore'] },
+  { state: 'Rajasthan', cities: ['Jaipur', 'Udaipur', 'Ajmer', 'Jodhpur'] },
+  { state: 'Tamil Nadu', cities: ['Chennai', 'Coimbatore', 'Tiruchirappalli'] },
+  { state: 'Kerala', cities: ['Kochi', 'Kozhikode', 'Thiruvananthapuram'] },
+  { state: 'West Bengal', cities: ['Kolkata', 'Asansol', 'Siliguri'] },
+  { state: 'Bihar', cities: ['Patna', 'Gaya'] },
+  { state: 'Goa', cities: ['Panaji', 'Vasco da Gama'] },
+  { state: 'Haryana', cities: ['Panipat', 'Ambala'] },
+];
+---
+
+<div class="w-full">
+
+  <div class="grid mx-auto ml-10 mr-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {
+      cities.map(({ state, cities }) => (
+        <div class=" p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold mb-2">{state}</h3>
+          <ul class="list-disc pl-5">
+            {cities.map((city) => (
+              <li>{city}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</div>

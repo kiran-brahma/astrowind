@@ -10,6 +10,8 @@ export interface Post {
 
   /**  */
   permalink: string;
+    /**  */
+    link: string;
 
   /**  */
   publishDate: Date;
@@ -107,6 +109,7 @@ export interface Widget {
 
 export interface Headline {
   title?: string;
+  link?:string;
   subtitle?: string;
   tagline?: string;
   classes?: Record<string, string>;

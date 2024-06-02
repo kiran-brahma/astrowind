@@ -72,13 +72,17 @@ export default defineConfig({
     }),
 
     astrowind({
+      domains: [
+        "astro.build",
+        'i.imgur.com',
+        'images.unsplash.com',
+      ],
       config: './src/config.yaml',
     }),
   ],
 
   image: {
-    service: squooshImageService(),
-    domains: ['cdn.pixabay.com'],
+    remotePatterns: [{ protocol: "https" }],
   },
 
   markdown: {

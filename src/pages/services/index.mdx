@@ -5,23 +5,71 @@ title: Our Services
 description: Knighthood offers top-notch security services, integrated facility management, customised staffing solutions and employee verification
 ---
 
-import Who from '~/components/web/who.jsx';
-import Services from '~/components/web/services.tsx';
+import { Image } from 'astro:assets';
 
 
+<Image class="mx-auto" src="https://i.imgur.com/KMNmtUH.png" alt="Knighthood Services" loading ="eager" width ="900" height="500"/>
 
 
-
-
-  <Who/>
 
  
 <center>
 
-<u><b classname="text-2xl">We Let you focus on your Business Growth</b></u>
-
+<h2>Fostering Business Growth</h2>
 </center>
+
 ## Services We Offer
 
-<Services/>
+<div class=" py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    
 
+    <div class="grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-3">
+      <div class="flex flex-col rounded-lg border p-4 md:p-6">
+        <h3 class="mb-2 text-lg font-semibold md:text-xl">Security Solutions</h3>
+        <img class="mx-auto" src="Security.svg" loading="eager"/>
+        <p class="mb-4 ">Specialised Guarding and Technology enabled security Solutions designed to meet your needs</p>
+        <a href="/services/security" class="mt-auto font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Security Solutions</a>
+      </div>
+      <div class="flex flex-col rounded-lg border p-4 md:p-6">
+        <h3 class="mb-2 text-lg font-semibold md:text-xl">Facility Management</h3>
+                <img class="mx-auto" src="facility.svg" loading="eager"/>
+
+        <p class="mb-4 ">Ensuring proper functioning of business facilities everyday</p>
+        <a href="/services/Facility" class="mt-auto font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Facility Management Solutions</a>
+      </div>
+      <div class="flex flex-col rounded-lg border p-4 md:p-6">
+        <h3 class="mb-2 text-lg font-semibold md:text-xl">Staffing Solutions</h3>
+                <img class="mx-auto" src="staffing.svg" loading="eager"/>
+
+        <p class="mb-4 ">Ensuring your Contractual Workforce meets your business goals</p>
+        <a href="/services/staffing" class="mt-auto font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Payroll Solutions</a>
+      </div>
+      <div class="flex flex-col rounded-lg border p-4 md:p-6">
+        <h3 class="mb-2 text-lg font-semibold md:text-xl">Payroll Solutions</h3>
+                <img class="mx-auto" src="payroll.svg" loading="eager"/>
+
+        <p class="mb-4 ">Complete Employee lifecycle management</p>
+        <a href="/services/payroll" class="mt-auto font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Payroll Solutions</a>
+      </div>
+
+      <div class="flex flex-col rounded-lg border p-4 md:p-6">
+        <h3 class="mb-2 text-lg font-semibold md:text-xl">Verification Solutions</h3>
+                <img class="mx-auto" src="verification.svg" loading="eager"/>
+
+        <p class="mb-4 ">Comprehensive profiling and screening of potential hires</p>
+        <a href="/services/payroll" class="mt-auto font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Payroll Solutions</a>
+      </div>
+      <div class="flex flex-col rounded-lg border p-4 md:p-6">
+        <h3 class="mb-2 text-lg font-semibold md:text-xl">Business Solutions</h3>
+                <img class="mx-auto" src="solutions.svg" loading="eager"/>
+
+        <p class="mb-4 ">Complete Suite of Services for Startups & MSME</p>
+        <a href="/services/payroll" class="mt-auto font-bold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Payroll Solutions</a>
+      </div>
+
+
+
+      </div>
+  </div>
+</div>

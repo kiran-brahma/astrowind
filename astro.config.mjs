@@ -1,8 +1,10 @@
 import path from 'path';
+import starlight from '@astrojs/starlight';
+
 import { fileURLToPath } from 'url';
 import react from '@astrojs/react';
 
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
@@ -27,8 +29,97 @@ const whenExternalScripts = (items = []) =>
 
 export default defineConfig({
   output: 'static',
+	trailingSlash: 'always',
 
   integrations: [react(),
+    starlight({
+      title: 'Knighthood Documentation',
+      logo: {
+				light: '/public/img/logo.png',
+				dark: '/public/img/logo.png',
+				replacesTitle: true,
+			},
+      sidebar: [
+      
+        {
+      
+          label: 'Employee Compliance',
+        items: [
+          {
+            label: "Introduction",
+            link: 'docs/intro',
+          },
+          {label: 'Labour Compliance',
+            autogenerate: { directory: 'docs/compliance' },
+          },
+          {label: 'Laws and Regulations',
+            autogenerate: { directory: 'docs/employment' },
+          },
+          {label: 'Income Tax',
+            autogenerate: { directory: 'docs/income-tax' },
+          },
+          {label: 'Payroll',
+            autogenerate: { directory: 'docs/payroll' },
+          },
+          {label: 'Resources',
+            autogenerate: { directory: 'docs/standard-resources' },
+          },
+        ]
+            },
+            {
+              label: 'Security System',
+              items:
+              [
+                {label: 'Introduction',
+                  link:'security/intro'
+                },
+
+                {label: 'Security Requirements',
+                  autogenerate: { directory: 'security/requirements' },
+                },
+                {label: 'Security Planning',
+                  autogenerate: { directory: 'security/planning' },
+                },
+                {label: 'Security Personnel',
+                  autogenerate: { directory: 'security/personnel' },
+                },
+                {label: 'Security Measures',
+                  autogenerate: { directory: 'security/measures' },
+                },
+                {label: 'Security Governance',
+                  autogenerate: { directory: 'security/governance' },
+                },
+                {label: 'Business Continuity',
+                  autogenerate: { directory: 'security/business_continuity' },
+                },
+                {label: 'Supply Chain Security',
+                  autogenerate: { directory: 'security/supply_chain' },
+                },
+                {label: 'Classification System',
+                  link:'security/classification'
+                },
+                {label: 'Event Security',
+                  autogenerate: { directory: 'security/event-security' },
+                },
+                {label: 'Pre-Employment Verification',
+                  autogenerate: { directory: 'security/verification' },
+                },
+                {label: 'Lifecycle Management',
+                  link:'security/lifecycle'
+                },
+                {label: 'FAQ',
+                  link:'security/faq'
+                },
+
+              ]
+            }
+
+        
+  
+  
+  ]
+    }),
+
     tailwind({
       applyBaseStyles: false,
     }),

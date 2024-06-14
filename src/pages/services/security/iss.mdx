@@ -8,6 +8,7 @@ layout: 'src/layouts/MarkdownLayout.astro'
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon';
 
+
 export const items = [
   { icon: 'tabler:shield-check', title: 'Static Guarding' },
   { icon: 'tabler:building-factory-2', title: 'Facility Security' },
@@ -18,7 +19,7 @@ export const items = [
 
 <div class="lg:grid lg:grid-cols-5 md:grid md:grid-cols-5 sm:grid sm:grid-cols-2 mx-auto gap-4"> 
   {
-    ['/1s.jpg', '/s.jpg', '/2s.webp', '/4s.jpg', '/5s.png'].map((imgPath, idx) => (
+    ['/1s.jpg', '/s.jpg', '/2s.webp', '/4s.jpg'].map((imgPath, idx) => (
       <Image
         key={idx}
         src={imgPath}
@@ -32,6 +33,7 @@ export const items = [
 
 ### Solutions tailored to your needs
 
+ <a class="mx-5"href="/services/security/iss/pso">VIP Protection / Bouncers</a>
 
 **Safeguard your business and assets with our Security Solutions designed to meet your requirements.**
 
@@ -40,8 +42,18 @@ Our Security officers will ensure that no matter what the situation, they are mo
 We will work with you to identify the right mix of Static Guarding along with Electronic Surveillance to ensure optimum service delivery at an economical cost.
 
 ## Service Offerings
-
-
+<div class=" grid-cols-1 ">
+      <li>  <a class="mx-5" href="/services/security/iss/static-guarding">Security Guard</a></li>
+      <li> <a class="mx-5"href="/services/security/iss/pso">VIP Protection/Bouncers</a></li>
+      <li>  <a class="mx-5"href="/services/security/iss/e-commerce">E-Commerce Secure Solutions</a></li>
+      <li>  <a class="mx-5" href="/services/security/iss/corp-inv">Corporate Investigations</a></li>
+      <li> <a class="mx-5" href="/services/security/iss/patrol">Patrolling Services</a></li>
+      <li>  <a class="mx-5" href="/services/security/iss/emergency">Emergency Response</a></li>
+      <li><a class="mx-5" href="/services/security/iss/fire">Fire & Safety Service</a></li>
+      <li> <a class="mx-5" href="/services/security/iss/training">Training Services</a></li>
+      <li><a class="mx-5" href="/services/security/iss/event">Event Security Management</a></li>
+      <li><a class="mx-5"href="/services/security/iss/warehouse">Warehouse Security Solutions</a></li>
+    </div>
 
 ## Frequently Asked Questions
 

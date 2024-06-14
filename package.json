@@ -46,8 +46,8 @@
     "react-dom": "^18.3.1",
     "starlight-blog": "^0.8.3",
     "tabler-icons-react": "^1.56.0",
-    "unpic": "^3.18.0",
-    "utils": "link:@/lib/utils"
+    "unpic": "^3.18.0"
+   
   },
   "devDependencies": {
     "@astrojs/mdx": "^3.1.0",

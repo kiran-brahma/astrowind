@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import type { MetaData } from '~/types';
 
@@ -25,4 +26,21 @@ const metadata: MetaData = {
       <slot />
     </div>
   </section>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule a Call',
+        href: '/contact',
+        target: '_blank',
+        icon: 'tabler:phone-outgoing',
+      },
+    ]}
+  >
+    
+    <Fragment slot="subtitle">
+      Connect with us to see how we can help you in your Security and Staffing needs for your Business.
+    </Fragment>
+  </CallToAction>
 </Layout>

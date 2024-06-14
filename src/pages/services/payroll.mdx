@@ -1,28 +1,31 @@
 ---
 title: Payroll Management
 description: Payroll Management for Employees and Contractual Workforce
+layout: 'src/layouts/MarkdownLayout.astro'
+
 ---
+import { Image } from 'astro:assets';
 
 
-<Cards num={4}>
-<div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-4  sm:grid sm:grid-cols-2  mx-auto">
+
+<div class="lg:grid lg:grid-cols-4 md:grid md:grid-cols-4  sm:grid sm:grid-cols-2  mx-auto">
  
-  <Card image title="" href="">
+ 
     <>![Employee Onboarding](/p1.svg)</>
-  </Card>
-  <Card image title="" href="">
+
+
     <>![Payroll Calculation](/p2.svg)</>
-  </Card>
-  <Card image title="" href="">
+
+
     <>![Salary Payment](/p3.svg)</>
-  </Card>
+
   
-   <Card image title="" href="">
+
     <>![Employee Payslip](/p4.svg)</>
     
-  </Card>
+
   </div>
-</Cards>
+
 
 
 
@@ -32,20 +35,20 @@ Tax, PF, ESI, Bonus, PT, Gratuity and other payments with ease
 ## Our Work in Numbers
 <br/>
 <center>
-<div className="stats stats-vertical lg:stats-horizontal shadow">
+<div class="stats stats-vertical lg:stats-horizontal shadow">
   
-  <div className="stat">
-    <div className="stat-title">Customers</div>
-    <div className="stat-value">200+</div>
+  <div class="stat">
+    <div class="stat-title">Customers</div>
+    <div class="stat-value">200+</div>
   </div>
   
-  <div className="stat">
-    <div className="stat-title">Total Personnel</div>
-    <div className="stat-value">10,000+</div>
+  <div class="stat">
+    <div class="stat-title">Total Personnel</div>
+    <div class="stat-value">10,000+</div>
   </div>
-  <div className="stat">
-    <div className="stat-title">SLA (Last 3 years)</div>
-    <div className="stat-value">99.2%</div>
+  <div class="stat">
+    <div class="stat-title">SLA (Last 3 years)</div>
+    <div class="stat-value">99.2%</div>
   </div>
 
 </div>
@@ -54,23 +57,22 @@ Tax, PF, ESI, Bonus, PT, Gratuity and other payments with ease
 
 ## Service Offerings
 
-<Cards className="mx-auto" >
-<div className="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3  sm:grid sm:grid-cols-2  mx-auto">
+
+<div class="lg:grid lg:grid-cols-2 md:grid md:grid-cols-2  sm:grid sm:grid-cols-2  mx-auto">
  
-  <Card arrow image title="Payroll Management"  href="/services/payroll/pm" className="mx-10 content-justify shadow-xl px-20">
-       <Image src="/payroll-system.webp" alt="Payroll Management" width={300} height={300}/>
+<div>
+<Image src="/payroll-system.webp" alt="Payroll Management" width={300} height={300}/>
 
-    <p>Complete Payroll Services for all your employees</p>
+[Complete Payroll Services for all your employees](/services/payroll/pm)
+</div>
+<div>
 
-  </Card>
-  <Card arrow image title="Employee Lifecycle Management"  href="/services/payroll/em" className="mx-10 content-justify shadow-xl px-20">
+<Image src="/employee_lifecycle.webp" alt="Employee Lifecycle Managementt" width={300} height={300}/>
 
-       <Image src="/employee_lifecycle.webp" alt="Employee Lifecycle Managementt" width={300} height={300}/>
+    [Employee Management from Hiring to Exit without any hassles](/services/payroll/em)
 
-    <p>Employee Management from Hiring to Exit without any hassles</p>
+   </div>
 
-   
-  </Card>
   </div>
-</Cards>
+
 

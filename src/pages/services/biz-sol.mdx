@@ -1,10 +1,56 @@
 ---
 title: Business Solutions
 description: Complete Suite of Business Services for MSME and Startups
+layout: 'src/layouts/MarkdownLayout.astro'
+
 ---
+import { Image } from 'astro:assets';
+
+export const items = [
+    { image: '/sol1.svg', alt: 'Business Solutions', title: 'Business Solutions' },
+    { image: '/time.svg', alt: 'Business Solutions', title: 'Business Solutions' },
+    { image: '/sol3.svg', alt: 'Business Solutions', title: 'Business Solutions' },
+    { image: '/sol4.svg', alt: 'Business Solutions', title: 'Business Solutions' },
+  ];
+  
+
+export const content = [
+  {
+   
+    title: 'Security Services',
+    link: "/services/security",
+  },
+  {
+
+    title: 'Intergrated Facility Management',
+    link: "/services/facility",
+  },
+  {
+    
+    title: 'Employee Staffing',
+    link: "/services/staffing",
+  },
+  {
+    
+    title: 'Payroll Management',
+    link: "/services/payroll",
+  },
+
+  {
+  
+    title: 'Employee Verification',
+    link: "/services/verification",
+  },
+];
 
 
-<Who/>
+
+      <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-4  gap-5 sm:grid sm:grid-cols-2  mx-auto">
+        {items.map((item) => (
+            <Image src={item.image} alt={item.alt} width={250} height={250}/>
+        ))}
+            </div>
+
 
 
 **Starting a Business is a tough ordeal that requires the founders and early employees to focus most of their energy on how to ensure growth and stability of operations.In this demanding times, let us be of aid by providing with a one stop solution for all business services you may need as you scale without any worries**
@@ -13,7 +59,7 @@ description: Complete Suite of Business Services for MSME and Startups
 <br></br>
 ## Our Work in Numbers
 <center>
-       <div className="lg:grid lg:grid-cols-2 md:grid md:grid-cols-2  sm:grid sm:grid-cols-2  mx-auto">
+       <div class="lg:grid lg:grid-cols-2 md:grid md:grid-cols-2  sm:grid sm:grid-cols-2  mx-auto">
 
 <Image src="/start.png" width='400' height='300' alt="Business Solutions"/>
 
@@ -27,19 +73,19 @@ description: Complete Suite of Business Services for MSME and Startups
 </center>
 
 <center>
-<div className="stats stats-vertical lg:stats-horizontal shadow">
+<div class="stats stats-vertical lg:stats-horizontal shadow">
   
-  <div className="stat">
-    <div className="stat-title">Startups</div>
-    <div className="stat-value">25+</div>
+  <div class="stat">
+    <div class="stat-title">Startups</div>
+    <div class="stat-value">25+</div>
   </div>
-  <div className="stat">
-    <div className="stat-title">MSME</div>
-    <div className="stat-value">40+</div>
+  <div class="stat">
+    <div class="stat-title">MSME</div>
+    <div class="stat-value">40+</div>
   </div>
-  <div className="stat">
-    <div className="stat-title">Total Personnel Deployed</div>
-    <div className="stat-value">6,500+</div>
+  <div class="stat">
+    <div class="stat-title">Total Personnel Deployed</div>
+    <div class="stat-value">6,500+</div>
   </div>
 
 </div>
@@ -53,7 +99,23 @@ We understand the need for providing high quality service within limited budgets
 We provide our complete suite of Services to these Organisation, customised to meet your needs. Working with us allows you the advantage of not worrying about dealing with multiple vendors as we provide every service that you might need.
 
 <br></br>
-<Startup/>
-
+<div className="py-8">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {content.map(({ title, link }) => (
+            <div key={title} className="p-4 border  rounded-lg">
+              <div className="flex items-center mb-2">
+      
+                <h3 className="font-bold text-primary ml-2">
+                  <a href={link}>
+                    {title}
+                  </a>
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
 
 

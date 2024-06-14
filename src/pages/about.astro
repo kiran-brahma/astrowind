@@ -1,9 +1,12 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
+import Cities from "~/components/common/Cities.astro"
+
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -17,212 +20,231 @@ const metadata = {
   <Hero
     tagline="About us"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: 'https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       alt: 'Caos Image',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Simplifying Staffing and Security needs <br />
+      <span class="text-accent dark:text-white highlight">across India</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      We Provide Business Services Solutions, Staffing Solutions, Security Solutions, Facility Management and Payroll Services to Organisations across India
+
     </Fragment>
+    Our solutions span across multiple industries. We are committed to helping organizations focus on their business while we work behind the scenes to ensure reliable business services and manpower solutions every day. With over a decade of experience serving our customers, we ensure that they are always provided with the right set of solutions for their growth needs, while ensuring economical pricing along the way.
+
+    Leveraging a team of qualified professionals, we have paved the way for our customers' success across 75+ cities in India. Over the past decade, we have worked with organizations across a wide array of industries. We work with our customers to develop custom solutions that meet their manpower needs, such as long-term, short-term, seasonal, flexible, and on-demand gig workforce.
+    
+    Our custom solutions are aligned with our customers' need for productivity for every person deployed, while ensuring all regulations and compliances are met.
+
   </Hero>
 
   <!-- Stats Widget ****************** -->
+  <div class="mx-auto p-20 font-semibold w-full min-w-[220px]">
+   <p > Our solutions span across multiple industries. We are committed to helping organizations focus on their business while we work behind the scenes to ensure reliable business services and manpower solutions every day. 
+    With over a decade of experience serving our customers, we ensure that they are always provided with the right set of solutions for their growth needs, while ensuring economical pricing along the way.</p>
 
+  <p class="mt-5">Leveraging a team of qualified professionals, we have paved the way for our customers' success across 75+ cities in India. Over the past decade, we have worked with organizations across a wide array of industries. 
+  We work with our customers to develop custom solutions that meet their manpower needs, such as long-term, short-term, seasonal, flexible, and on-demand gig workforce.</p>
+  
+  <p class="mt-5">Our custom solutions are aligned with our customer's need for productivity for every person deployed, while ensuring all regulations and compliances are met.</p>
+  </div>
   <Stats
     title="Statistics about us"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Customers', amount: '200+' },
+      { title: 'Cities', amount: '85+' },
+      { title: 'Associates', amount: '10,000+' },
+      { title: 'Psara License', amount: '17 States' },
+      
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+  <Features
+    id="services"
+    tagline="Services"
+    title="What we Offer"
+    subtitle="Experience a comprehensive suite of staffing solutions tailored to meet your unique workforce needs."
     items={[
       {
-        title: 'Educational',
+        title: 'Security Services',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'Specialised Guarding and Tech enabled Security Solutions designed to meet your needs.',
+        icon: 'tabler:home-shield',
       },
       {
-        title: 'Interior Design',
+        title: 'Facility Management',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Ensuring proper functioning of business facilities everyday',
+        icon: 'tabler:wash-off',
       },
       {
-        title: 'Photography',
+        title: 'Staffing Solutions',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Ensuring your Contractual Workforce meets your business goals.',
+        icon: 'tabler:friends',
+      },
+      {
+        title: 'Payroll Solutions',
+        description:
+          'Complete Employee lifecycle management',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Empployee Verifications Solutions',
+        description:
+          "Comprehensive profiling and screening of potential hires.",
+        icon: 'tabler:zoom-check',
+      },
+      {
+        title: 'Business Solutions',
+        description:
+          'Complete Suite of Services for Startups & MSME.',
+        icon: 'tabler:rocket',
       },
     ]}
   />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
+  <center><button class="mx-auto mb-10"><a href="/services" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Explore Our Services</a></a></button></center>
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
+  title="Where We Operate"
+  subtitle="Pan-India staffing solutions for diverse industries."
+  tagline="Sectors"
+  items={[
+    {
+      title: 'Aviation',
+    icon: 'mdi:aeroplane',
+    },
+    {
+      title: 'Banking',
+      
+      icon: 'mdi:bank',
+    },
+    {
+      title: 'Retail',
+      
+      icon: 'mdi:cart-variant',
+    },
+    {
+      title: 'Telecom',
+      
+      icon: 'mdi:radio-tower',
+    },
+    {
+      title: 'Logistics',
+      
+      icon: 'mdi:warehouse',
+    },
+    {
+      title: 'Manufacturing',
+      
+      icon: 'mdi:manufacturing',
+    },
+    {
+      title: 'E-Commerce and Hyper Local',
+      
+      icon: 'mdi:shopping-search',
+    },
+    {
+      title: 'Education',
+      
+      icon: 'mdi:school',
+    },
+    {
+      title: 'Construction',
+      
+      icon: 'mdi:construction',
+    },
+    {
+      title: 'Government',
+      
+      icon: 'mdi:building',
+    },
+    {
+      title: 'Automobile',
+      
+      icon: 'mdi:car',
+    },
+    {
+      title: 'Health Care',
+      
+      icon: 'mdi:hospital',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features2>
+<h2 class="mb-4 text-center text-2xl font-bold md:mb-8 lg:text-3xl">Our Presence Across India</h2>   
+<Cities/>
+<Features3
+    title="Let us know how we can help"
+    subtitle="We’re here to help and answer any question you might have."
     columns={4}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Phone',
+        icon: 'tabler:phone',
+        callToAction: {
+          target: '_blank',
+          text: 'Call us',
+          href: '/contact',
+          variant: 'link',
+        },
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'Email',
+        icon: 'tabler:mail',
+        callToAction: {
+          target: '_blank',
+          text: 'Write to us',
+          href: 'mailto:support@knighthood.co',
+          variant: 'link',
+        },
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: 'Chat with Us',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          target: '_blank',
+          text: 'Start chatting',
+          href: 'https://wa.me/919911454503',
+          variant: 'link',
+        },
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'Customer Support',
+        icon: 'tabler:ticket',
+        callToAction: {
+          target: '_blank',
+          text: 'Raise a Ticket',
+          href: 'https://airtable.com/embed/applVP0mItmSc4koi/shrvEkFQnN11VZbRY',
+          variant: 'link',
+        },
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- CallToAction Widget *********** -->
 
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
+  <CallToAction
+    actions={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        variant: 'primary',
+        text: 'Schedule a Call',
+        href: '/contact',
+        target: '_blank',
+        icon: 'tabler:phone-outgoing',
       },
     ]}
-  />
-</Layout>
+  >
+    
+    <Fragment slot="subtitle">
+      Connect with us to see how we can help you in your Security and Staffing needs for your Business.
+    </Fragment>
+  </CallToAction>
+
+  </Layout>

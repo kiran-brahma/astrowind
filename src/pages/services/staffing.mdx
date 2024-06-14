@@ -1,28 +1,29 @@
 ---
 title: Employee Staffing
 description: Short and Long Term Staffing Solutions to ogranisations
+layout: 'src/layouts/MarkdownLayout.astro'
 ---
 
+import { Image } from 'astro:assets';
 
-<Cards num={4}>
-      <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-4  sm:grid sm:grid-cols-2  mx-auto">
 
-  <Card image title="" href="">
+      <div class="lg:grid lg:grid-cols-4 md:grid md:grid-cols-4  sm:grid sm:grid-cols-2  mx-auto">
+
+
     <>![Contractual Workforce](/contract.svg)</>
-  </Card>
-  <Card image title="" href="">
-    <>![Short and Long Tem Office Staffing](/emp.svg)</>
-  </Card>
-  <Card image title="" href="">
-    <>![Employee Staffing](/cv.svg)</>
-  </Card>
+
   
-   <Card image title="" href="">
+    <>![Short and Long Tem Office Staffing](/emp.svg)</>
+
+
+    <>![Employee Staffing](/cv.svg)</>
+
+
     <>![Employee Hiring](/hire.svg)</>
     
-  </Card>
+
   </div>
-</Cards>
+
 
 
 
@@ -33,25 +34,25 @@ Our services focusses on trust, transparency, and care, working closely with you
 ## Our Work in Numbers
 <br/>
 <center>
-<div className="stats stats-vertical lg:stats-horizontal shadow">
+<div class="stats stats-vertical lg:stats-horizontal shadow">
   
-  <div className="stat">
-    <div className="stat-title">Customers</div>
-    <div className="stat-value">120+</div>
+  <div class="stat">
+    <div class="stat-title">Customers</div>
+    <div class="stat-value">120+</div>
   </div>
   
-  <div className="stat">
-    <div className="stat-title">Total Workforce Deployed</div>
-    <div className="stat-value">15,000+</div>
+  <div class="stat">
+    <div class="stat-title">Total Workforce Deployed</div>
+    <div class="stat-value">15,000+</div>
   </div>
   
-  <div className="stat">
-    <div className="stat-title">Compliance Failures</div>
-    <div className="stat-value">0%</div>
+  <div class="stat">
+    <div class="stat-title">Compliance Failures</div>
+    <div class="stat-value">0%</div>
   </div>
-  <div className="stat">
-    <div className="stat-title">SLA (Last 3 years)</div>
-    <div className="stat-value">99.8%</div>
+  <div class="stat">
+    <div class="stat-title">SLA (Last 3 years)</div>
+    <div class="stat-value">99.8%</div>
   </div>
   
 </div>
@@ -60,23 +61,23 @@ Our services focusses on trust, transparency, and care, working closely with you
 
 ## Our Service Offerings
 
-<Cards num={1}>
-       <div className="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3  sm:grid sm:grid-cols-2  mx-auto">
 
-  <Card arrow image title="Contractual Staffing" href="/services/staffing/cs" className="mx-10 content-justify shadow-xl px-20">
+       <div class="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3  gap -5 sm:grid sm:grid-cols-2  mx-auto">
 
+
+<div>
    <Image src="/cont-staff.jpeg" alt="Security Services" width={300} height={300}/>
-    <p>Long and Short term Hiring Solutions for Business that scale as per needs</p>
-  </Card>
-  <Card arrow image title="Flexible Workforce " href="/services/staffing/fs" className="mx-10 content-justify shadow-xl px-20">
+    [Long & Short term Hiring Solutions](/services/staffing/cs)
+</div>
+<div>
    <Image src="/flexible.webp" alt="Flexible Workforce" width={300} height={300}/>
 
-    <p>Flexible Workforce Solutions for your business needs </p>
-  </Card>
-  <Card arrow image title="Workforce Hiring" href="/services/staffing/hs" className="mx-10 content-justify shadow-xl px-20">
+    [Flexible Workforce Solutions](/services/staffing/fs) 
+    </div>
+<div>
      <Image src="/hiring.png" alt="Workforce Hiring" width={300} height={300}/>
 
-    <p>Attracting and Hiring Workforce for your business needs </p>
-  </Card>
+    [Attracting and Hiring Workforce](/services/staffing/hs) 
+</div>
   </div>
-</Cards>
+

@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+import Layout from '~/layouts/PageLayout.astro';
+
+
+import { Image } from "astro:assets";
+import FormattedDate from '../../components/FormattedDate.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout>
+  <main>
+    <article class="prose mx-auto dark:prose-invert">
+        <div class="prose-h1 text-center">
+          <h1>{post.data.title}</h1>
+          <div class="prose-a:no-underline">
+            {
+              post.data.tags.map((tag) => (
+                <span class="mb-2 mr-2 inline-block rounded-full bg-neutral-200 px-3 py-1 text-sm hover:bg-neutral-500 dark:bg-neutral-600">
+                  {tag}
+                </span>
+              ))
+            }
+          </div>
+          <div class="flex justify-between">
+            <small
+              >Published on <FormattedDate date={post.data.date} />
+              </small>
+          </div>
+          <Image src={post.data.image} alt={post.data.title} inferSize/>
+        </div>
+        <div class="prose-img:rounded-lg">
+          {
+            post.data.imager && (
+              <Image src={post.data.image} alt={post.data.title} inferSize/>
+            )
+          }
+        </div>
+        <div>
+          <Content />
+        </div>
+        
+    </article>
+    
+  </main>
+</Layout>

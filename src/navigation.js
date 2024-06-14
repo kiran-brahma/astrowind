@@ -28,7 +28,7 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  
 };
 
 export const footerData = {
@@ -36,33 +36,33 @@ export const footerData = {
     {
       title: 'Our Solutions',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Security', href: '/services/security' },
+        { text: 'Facility Management', href: '/services/facility' },
+        { text: 'Staffing ', href: '/services/staffing' },
+        { text: 'Payroll', href: '/services/payroll' },
+        { text: 'Employee Verification', href: '/services/verification' },
+        { text: 'Pricing', href: '/pricing' },
+        { text: 'Success Stories', href: '/case' },
       ],
     },
     {
       title: 'Support & Media',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Blog', href: '/blog' },
+        { text: 'Latest Updates', href: '/updates' },
+        { text: 'Employee Support', href: '/support/employee' },
+        { text: 'Customer Support', href: '/support/customer' },
+        { text: 'Security Hiring Guide', href: '/marketing/hire-security-guards' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'About Us', href: '/about' },
+        { text: 'Careers', href: 'https://careers.knighthood.co' },
+        { text: 'Work Opportunities', href: 'https://careers.knighthood.co/employment-opportunities' },
+        { text: 'Resources', href: '/docs' },
+        { text: 'Contact', href: '/contact' },
       ],
     },
     

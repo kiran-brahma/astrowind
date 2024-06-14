@@ -1,8 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Grid from '@mui/material/Grid';
 
 const metadata = {
   title: 'Contact',
@@ -14,31 +14,10 @@ const metadata = {
 
   <HeroText tagline="Contact" title="Let's Connect!" />
 
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  
+    <iframe data-tally-src="https://tally.so/r/nP6exx?transparentBackground=1" width="100%" height="500" ></iframe>
+
 
   <!-- Features2 Widget ************** -->
 
@@ -47,31 +26,31 @@ const metadata = {
     items={[
       {
         title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        description: `Chat with us on WhatsApp for inquiries related to our services .`,
       },
       {
         title: 'Contact sales',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Chat with us for questions about purchases, customization options and other aspects of our services.',
       },
       {
         title: 'Technical support',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          'Write to us if you are keen to understand any specific aspects of our services.',
       },
       {
         title: 'Phone',
-        description: '+1 (234) 567-890',
+        description: '011-41013522',
         icon: 'tabler:headset',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'support@knighthood.co',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Corporate',
+        description: 'First Floor, Plot 5, Lane 2, Westend Marg, Saidulajab, New Delhi - 110030',
         icon: 'tabler:map-pin',
       },
     ]}

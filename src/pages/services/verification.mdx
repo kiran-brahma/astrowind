@@ -1,25 +1,28 @@
 ---
 title: Employee Verification
 description: Verification of Employees and Contrctors
+layout: 'src/layouts/MarkdownLayout.astro'
+
 ---
+import { Image } from 'astro:assets';
 
-<Cards num={4}>
-      <div className="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3  sm:grid sm:grid-cols-4 justify mx-auto">
 
-  <Card image title="" href="">
+      <div class="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3  sm:grid sm:grid-cols-4 justify mx-auto">
+
+
     <>![Contractual Workforce](/v1.svg)</>
-  </Card>
 
-  <Card image title="" href="">
+
+
     <>![Employee Staffing](/v3.svg)</>
-  </Card>
+
   
-   <Card image title="" href="">
+
     <>![Employee Hiring](/v4.svg)</>
     
-  </Card>
+
   </div>
-</Cards>
+
 
 
 
@@ -32,16 +35,16 @@ Identity checks help us understand if the candidate is who they claim they are a
 ## Our Work in Numbers
 <br/>
 <center>
-<div className="stats stats-vertical lg:stats-horizontal shadow">
+<div class="stats stats-vertical lg:stats-horizontal shadow">
   
-  <div className="stat">
-    <div className="stat-title">Verified Personnel</div>
-    <div className="stat-value">18,000+</div>
+  <div class="stat">
+    <div class="stat-title">Verified Personnel</div>
+    <div class="stat-value">18,000+</div>
   </div>
   
-  <div className="stat">
-    <div className="stat-title">Cities Covered</div>
-    <div className="stat-value">85+</div>
+  <div class="stat">
+    <div class="stat-title">Cities Covered</div>
+    <div class="stat-value">85+</div>
   </div>
  
 
@@ -50,13 +53,20 @@ Identity checks help us understand if the candidate is who they claim they are a
 </center>
 ## Service Offerings
 
-<Verify/>
+- ID and Document Validation
+- Physical Address Verification
+- Past Employee Verification
+- Criminal Record and Police Verification
+- Qualification Check
+
+You can read in depth of our [verification process from here](/security/verification/verification/) 
+
 
 
 
 <br/>
 ## Our Process 
-We have developed a robust process to ensure that our customers have access to all the necessary information needed to make informed decisions regarding their employees. We also provide guidance on risk mitigation strategies when necessary. You can review our [pre-employment verification process](https://docs.knighthood.co/security/verification/verification) to understand in more detail how we undertake such verifications.
+We have developed a robust process to ensure that our customers have access to all the necessary information needed to make informed decisions regarding their employees. We also provide guidance on risk mitigation strategies when necessary. You can review our [pre-employment verification process](/security/verification/verification) to understand in more detail how we undertake such verifications.
 
 
 ## Checks we Undertake
@@ -66,6 +76,6 @@ Identification, Nationality, Reference, Local Police Verification
 ### Optional Checks
 Educational Qualification, Credit Check, Criminal Record Check Across India
 ### Consultation
-Based on Report, we provide advise our customers on way forward. A [sample report can be viewed here](https://docs.knighthood.co/security/verification/verification-report)
+Based on Report, we provide advise our customers on way forward. A [sample report can be viewed here](/security/verification/verification-report)
  
 

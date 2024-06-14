@@ -1,5 +1,7 @@
 import path from 'path';
 import starlight from '@astrojs/starlight';
+import vercel from '@astrojs/vercel/serverless';
+
 
 import { fileURLToPath } from 'url';
 import react from '@astrojs/react';
@@ -28,11 +30,13 @@ const whenExternalScripts = (items = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'static',
-	trailingSlash: 'always',
+
 
   integrations: [react(),
     starlight({
+      
+
+
       title: 'Knighthood Documentation',
       logo: {
 				light: '/public/img/logo.png',
@@ -44,6 +48,7 @@ export default defineConfig({
         {
       
           label: 'Employee Compliance',
+          collapsed: true,
         items: [
           {
             label: "Introduction",
@@ -68,6 +73,7 @@ export default defineConfig({
             },
             {
               label: 'Security System',
+              collapsed: true,
               items:
               [
                 {label: 'Introduction',
@@ -164,9 +170,10 @@ export default defineConfig({
 
     astrowind({
       domains: [
-        "astro.build",
+        
         'i.imgur.com',
         'images.unsplash.com',
+        'images.pexels.com',
       ],
       config: './src/config.yaml',
     }),

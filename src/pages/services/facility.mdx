@@ -1,29 +1,32 @@
 ---
 title: Integrated Facility Management Solutions
 description: Facility Management Solutions offered by us
+layout: 'src/layouts/MarkdownLayout.astro'
+
 ---
+import { Image } from 'astro:assets';
 
 
 
-<Cards num={4}>
-       <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-4  sm:grid sm:grid-cols-2  mx-auto">
 
-  <Card image title="" href="">
+       <div class="lg:grid lg:grid-cols-4 md:grid md:grid-cols-4  sm:grid sm:grid-cols-2  mx-auto">
+
+
     <>![Cleaning Service](/facility.svg)</>
-  </Card>
-  <Card image title="" href="">
+
+
     <>![Housekeeping](/cleaners.svg)</>
-  </Card>
-  <Card image title="" href="">
+
+
     <>![Building Management System](/clean.svg)</>
-  </Card>
+
   
-   <Card image title="" href="">
+  
     <>![Engineering Services](/engineer.svg)</>
     
-  </Card>
+
   </div>
-</Cards>
+
 
 We assure you of a hassle free, hygienic and happy work environment adhering to your specific 
 business demand. Seamless and integrated management of your facilities ensures your organisation
@@ -33,24 +36,24 @@ business demand. Seamless and integrated management of your facilities ensures y
 ## Our Work in Numbers
 <br/>
 <center>
-<div className="stats stats-vertical lg:stats-horizontal shadow">
+<div class="stats stats-vertical lg:stats-horizontal shadow">
   
-  <div className="stat">
-    <div className="stat-title">Customers</div>
-    <div className="stat-value">75+</div>
+  <div class="stat">
+    <div class="stat-title">Customers</div>
+    <div class="stat-value">75+</div>
   </div>
   
-  <div className="stat">
-    <div className="stat-title">Total Personnel Deployed</div>
-    <div className="stat-value">5,000+</div>
+  <div class="stat">
+    <div class="stat-title">Total Personnel Deployed</div>
+    <div class="stat-value">5,000+</div>
   </div>
-  <div className="stat">
-    <div className="stat-title">Total office Area(Sqft)</div>
-    <div className="stat-value">12.8 Lac</div>
+  <div class="stat">
+    <div class="stat-title">Total office Area(Sqft)</div>
+    <div class="stat-value">12.8 Lac</div>
   </div>
-  <div className="stat">
-    <div className="stat-title">SLA (Last 3 years)</div>
-    <div className="stat-value">99.4%</div>
+  <div class="stat">
+    <div class="stat-title">SLA (Last 3 years)</div>
+    <div class="stat-value">99.4%</div>
   </div>
 </div>
 
@@ -58,19 +61,22 @@ business demand. Seamless and integrated management of your facilities ensures y
 
 ## Our Service Offerings
 
-<Cards num={1}>
-       <div className="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3  sm:grid sm:grid-cols-2  mx-auto">
 
-  <Card image  arrow title="Soft Cleaning Services" href="/services/facility/scs" className="mx-10  content-justify shadow-xl px-20">
-         <Image src="/soft-cleaning.jpeg" alt="Soft Cleaning Services" width={300} height={300}/>
+       <div class="lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 gap-10  sm:grid sm:grid-cols-2  mx-auto">
 
-    <p>Simple One Stop Solution for all your Cleaning services for all your assets across India</p>
-  </Card>
-  <Card image arrow title="Hard / Engineering Services" href="/services/facility/hes" className="mx-10  content-justify shadow-xl px-20">
-             <Image src="/engg-services.jpeg" alt="Hard / Engineering Services" width={300} height={300}/>
+ <div>
+ <Image src="/soft-cleaning.jpeg" alt="Soft Cleaning Services" width={300} height={300}/>
+[Soft Cleaning](/services/facility/scs)
+<br/>
+Simple One Stop Solution for all your Cleaning services for all your assets across India
+</div>
+<div>
 
-    <p>Professionally Managed Engineering Services at your premises to create impact in a cost-effective manner </p>
-  </Card>
+<Image src="/engg-services.jpeg" alt="Hard / Engineering Services" width={300} height={300}/>
+[Hard Engineering Services](/services/facility/hes)
+<br/>
+Professionally Managed Engineering Services at your premises to create impact in a cost-effective manner 
+</div>
   
   </div>
-</Cards>
+

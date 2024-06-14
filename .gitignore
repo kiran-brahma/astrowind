@@ -2,6 +2,10 @@
 dist/
 .output/
 
+src/content/.obsidian
+src/content/post/.obsidian
+src/content/template
+
 # dependencies
 node_modules/
 

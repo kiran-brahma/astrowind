@@ -1,0 +1,1 @@
+Array.from(document.getElementsByTagName("pre")).forEach((e=>{e.setAttribute("tabindex","0")}));

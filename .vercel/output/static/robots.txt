@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://knighthoood.co
-
-# Sitemaps
-Sitemap: https://knighthoood.co/sitemap.xml

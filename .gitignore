@@ -1,6 +1,8 @@
 # build output
 dist/
 .output/
+.vscode
+.vercel
 
 src/content/.obsidian
 src/content/post/.obsidian

@@ -41,13 +41,11 @@
     "lib-utils-ts": "0.0.0-test",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
-    "nextra-theme-docs": "^2.13.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "starlight-blog": "^0.8.3",
     "tabler-icons-react": "^1.56.0",
     "unpic": "^3.18.0"
-   
   },
   "devDependencies": {
     "@astrojs/mdx": "^3.1.0",
@@ -66,7 +64,7 @@
     "@typescript-eslint/parser": "^7.13.0",
     "astro-eslint-parser": "^1.0.2",
     "daisyui": "^4.12.2",
-    "eslint": "8.5.6",
+    "eslint": "^8.57.0",
     "eslint-plugin-astro": "^1.2.2",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "globals": "^15.4.0",

@@ -41,25 +41,25 @@ protocols while making appropriate changes that matter the most to our customers
 ## Our Work in Numbers
 <br/>
 <center>
-<div className="stats stats-vertical lg:stats-horizontal shadow">
+<div class="stats stats-vertical lg:stats-horizontal shadow">
   
-  <div className="stat">
-    <div className="stat-title">Customers</div>
-    <div className="stat-value">150+</div>
+  <div class="stat">
+    <div class="stat-title">Customers</div>
+    <div class="stat-value">150+</div>
   </div>
   
-  <div className="stat">
-    <div className="stat-title">Total Security Personnel Deployed</div>
-    <div className="stat-value">7500+</div>
+  <div class="stat">
+    <div class="stat-title">Total Security Personnel Deployed</div>
+    <div class="stat-value">7500+</div>
   </div>
   
-  <div className="stat">
-    <div className="stat-title">States with PSARA License</div>
-    <div className="stat-value">18+ Counting</div>
+  <div class="stat">
+    <div class="stat-title">States with PSARA License</div>
+    <div class="stat-value">18+ Counting</div>
   </div>
-  <div className="stat">
-    <div className="stat-title">SLA (Last 3 years)</div>
-    <div className="stat-value">99.3%</div>
+  <div class="stat">
+    <div class="stat-title">SLA (Last 3 years)</div>
+    <div class="stat-value">99.3%</div>
   </div>
   
 </div>
@@ -68,24 +68,24 @@ protocols while making appropriate changes that matter the most to our customers
 
 ## Our Solutions
 <br/>
-<section className="py-12">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-8">
+<section class="py-12">
+      <div class="container mx-auto">
+        <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col rounded-lg shadow-xl overflow-hidden"
+              class="flex flex-col rounded-lg shadow-xl overflow-hidden"
             >
               <a href={service.href}>
                 <img
                   src={service.image}
                   alt={`${service.title} Image`}
-                  className="w-full h-48 object-cover"
+                  class="w-full h-48 object-cover"
                 />
               </a>
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-700">{service.description}</p>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold mb-2">{service.title}</h3>
+                <p>{service.description}</p>
               </div>
             </div>
           ))}

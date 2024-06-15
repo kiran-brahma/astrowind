@@ -5,6 +5,21 @@ layout: 'src/layouts/MarkdownLayout.astro'
 
 ---
 import { Image } from 'astro:assets';
+export const services = [
+  {
+    title: "Soft Cleaning Services",
+    image: "/soft-cleaning.jpeg",
+    description: "Simple One Stop Solution for all your Cleaning services for all your assets across India",
+    href: "/services/facility/scs",
+  },
+  {
+    title: "Hard Engineering Services",
+    image: "/engg-services.jpeg",
+    description: "Professionally Managed Engineering Services at your premises to create impact in a cost-effective manner ",
+    href: "/services/facility/hes",
+  },
+ 
+];
 
 
 
@@ -62,21 +77,28 @@ business demand. Seamless and integrated management of your facilities ensures y
 ## Our Service Offerings
 
 
-       <div class="lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 gap-10  sm:grid sm:grid-cols-2  mx-auto">
-
- <div>
- <Image src="/soft-cleaning.jpeg" alt="Soft Cleaning Services" width={300} height={300}/>
-[Soft Cleaning](/services/facility/scs)
-<br/>
-Simple One Stop Solution for all your Cleaning services for all your assets across India
-</div>
-<div>
-
-<Image src="/engg-services.jpeg" alt="Hard / Engineering Services" width={300} height={300}/>
-[Hard Engineering Services](/services/facility/hes)
-<br/>
-Professionally Managed Engineering Services at your premises to create impact in a cost-effective manner 
-</div>
-  
-  </div>
+  <section class="py-12">
+      <div class="container mx-auto">
+        <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              class="flex flex-col rounded-lg shadow-xl overflow-hidden"
+            >
+              <a href={service.href}>
+                <img
+                  src={service.image}
+                  alt={`${service.title} Image`}
+                  class="w-full h-48 object-cover"
+                />
+              </a>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold mb-2">{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 

@@ -1,6 +1,6 @@
 import path from 'path';
 import starlight from '@astrojs/starlight';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/static';
 import compress from 'astro-compress';
 
 
@@ -31,7 +31,15 @@ const whenExternalScripts = (items = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-
+  output: 'static',
+  adapter: vercel(
+    {webAnalytics: {
+      enabled: true,
+    },
+    imagesConfig: {
+      sizes: [320, 640, 1280],
+    }
+}),
 
   integrations: [react(),
     starlight({
@@ -130,7 +138,11 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date('2024-06-16'),
+    }),
     mdx(),
     icon({
       include: {

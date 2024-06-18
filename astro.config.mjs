@@ -46,8 +46,8 @@ export default defineConfig({
 
       title: 'Knighthood Documentation',
       logo: {
-				light: '/public/img/logo.png',
-				dark: '/public/img/logo.png',
+				light: '/src/assets/favicons/logo.png',
+				dark: '/src/assets/favicons/logo.png',
 				replacesTitle: true,
 			},
       sidebar: [

@@ -44,7 +44,7 @@ const posts = (await getCollection('blog')).sort(
                     <div class="prose-a:no-underline">
             {
               post.data.tags.map((tag) => (
-                <span class="mb-2 mr-2 inline-block rounded-full  px-3 py-1 text-sm ">
+                <span class="mb-2 mr-2 inline-block badge-ghost rounded-lg font-semibold  px-3 py-1 text-sm ">
                   {tag}
                 </span>
               ))

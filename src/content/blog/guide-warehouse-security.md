@@ -17,7 +17,7 @@ The average warehouse experiences a lot of foot traffic on any given day. From e
 
 ## Importance of Warehouse Security Management[​](http://localhost:3000/blog/security/guide-warehouse-security#importance-of-warehouse-security-management)
 
-When it comes to improving your [warehouse security management](http://knighthood.co/blog/security/checklist-warehouse), it is important to consider more than just securing the loading dock. While you may not want to imagine it, inventory is most at risk once it’s inside your facility. Having strong [security measures](http://knighthood.co/blog/security-types-warehouse) in place will help safeguard the inventory on which you rely to make money.
+When it comes to improving your [warehouse security management](/blog/security/checklist-warehouse), it is important to consider more than just securing the loading dock. While you may not want to imagine it, inventory is most at risk once it’s inside your facility. Having strong [security measures](/blog/security-types-warehouse) in place will help safeguard the inventory on which you rely to make money.
 
 ## Secure Staff Procedures[​](http://localhost:3000/blog/security/guide-warehouse-security#secure-staff-procedures)
 

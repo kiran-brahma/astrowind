@@ -70,3 +70,9 @@ Understand what are security needs for different teams such as audio and video p
 Ready to secure your site? Connect with us at Knighthood to assess your current security measures and identify areas for improvement. 
 
 We at [Knighthood](http://knighthood.co) have been working with over 200+ organisations for over 5 years. We focus on ensuring high service levels at affordable prices. [*You can read more about why our customers choose to work with us.*](http://knighthood.co/whyus)
+
+
+## Suggested Reading
+- [Site Security Planning](/security/planning/site)
+- [Comprehensive Guide to Knighthood's Security System](/blog/security-report)
+- [Effective Security Awareness Training](/security/governance/awareness)

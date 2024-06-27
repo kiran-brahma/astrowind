@@ -43,3 +43,9 @@ We at Knighthood have been implementing new age security solutions for over 4 ye
 If you are looking for similar solutions, feel free to [connect with us](/contact) to discuss how we can help.  
 
 We focus on ensuring high service levels at affordable prices. You can [read more about why our customers choose to work with us](/whyus). We have been working with over 200+ organizations for over 5 years.
+
+## Suggested Reading
+
+- [How Remote Monitoring Works](/blog/why-remote-monitoring)
+- [The Role of Video Monitoring in Warehouse Security](/blog/warehouse-video-monitor)
+- [Remote Security Monitoring](/blog/remote-monitoring)

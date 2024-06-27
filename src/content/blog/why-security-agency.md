@@ -1,11 +1,11 @@
 ---
-title: Why You Should Hire a Security Service
-excerpt: Outlining the top 10 reasons why you should hire a security service. Learn How Knighthood can help you
+title: Why You Should Hire a Security Agency
+excerpt: Outlining the top 10 reasons why you should hire a security agency. Learn How Knighthood can help you
 date: 2023-04-02
 cuid: clk6mbkt0001j09jk2zgjea4g
 slug: why-security-agency
 image: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/oQD9uq4Rd4I/upload/496a6b95d215f5b86c8b528474b516ad.jpeg
-tags: 
+tags:
   - Security
 ---
 

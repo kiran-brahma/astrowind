@@ -2,7 +2,7 @@
 title: How to Hire Top-Notch Security Guards
 excerpt: Hiring Security Guards? Learn how to vet agencies, evaluate capabilities, and find reliable partners that are focussed to meet your needs
 date: 2024-05-20
-image: https://i.imgur.com/Ki9pHmT.png
+image: https://scontent.xx.fbcdn.net/v/t1.15752-9/448497444_838981924304324_7791580460582321979_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Q-xKUVh-YFMQ7kNvgGYbHT5&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGqkQFnDTMbEy53snDii4doklyDsaAYCNVdWbBRkT5tdQ&oe=66A4FA01
 tags:
   - Security
 ---
@@ -11,6 +11,7 @@ tags:
 Let's be real - keeping your people and assets safe is no joke. Whether you've got a brand new facility opening up or just want to level up your current security, finding the right security agency is crucial. Within Delhi-NCR over 2100+ agencies are present with PSARA licenses and 40,000+ agencies across India that have the license. If we are to include those without one, the number will surely be 10X. 
 
 <Image className="mx-auto" src="https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hire Security Guards" width="400" height ="400" />
+
 
 
 

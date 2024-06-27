@@ -1,25 +1,20 @@
 ---
-title: "Cost of Hiring a Security Guard in India"
-excerpt: "In this post, we discuss the cost of hiring a security guard in India and provide an estimate to assist you. Contact Knighthood to know more"
-date: 2024-05-06
-cuid: clk2ntk36000609ji4g3bco2q
-slug: security-guard-cost
-image: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/HlLno-CSbq8/upload/307058ea7bd32c0e004f2bb8cc56fbf7.jpeg
+title: Cost of Hiring a Security Guard in India
+excerpt: In this post, we discuss the cost of hiring a security guard in India and provide an estimate to assist you. Contact Knighthood to know more
+date: 2024-06-27
+image: https://i.imgur.com/FX1d5WP.png
 tags:
   - Security
   - Pricing
 ---
 
-If you own a business, you know it takes lots of effort to stay open. You may have thought about hiring a security guard to keep your business safe. But why should you do that? [This post](/blog/security-Service) will explain why a security guard is needed to protect your business and how they can do it. In the current blog post, we hope to provide you with a cost estimate to understand how much it costs to hire a security guard
+If you own a business, you know it takes lots of effort to stay open. You may have thought about hiring a security guard to keep your business safe. But why should you do that? [This post](/blog/security-service) will explain why a security guard is needed to protect your business and how they can do it. In the current blog post, we hope to provide you with a cost estimate to understand how much it costs to hire a security guard
 
-![Security Guard Hiring Cost](https://i.imgur.com/LPq7pmZ.png)
-
-
-## How Much Does it Cost to Hire a Security Guard in India?[​](http://localhost:3000/blog/security-guard-cost#how-much-does-it-cost-to-hire-a-security-guard-in-india)
-
+## How Much Does it Cost to Hire a Security Guard in India?[
 Typically, security guards in India are paid around Rs. 13,000 to Rs. 27,000 per month, depending on the region and the experience of the guard. For example, a guard in Delhi is paid an average of Rs. 18,000 per month, while in Bangalore, the average salary is Rs. 15,000 per month. This means that the cost of hiring a security guard varies significantly across different cities in India.
 
-One should be aware of all the cost components that need to be considered when engaging with any agency before hiring a Security Guard or for that matter any blue-collared employee. [This post](http://knighthood.co/blog/our-pricing) explains all the cost elements that one needs to be aware of to be fully compliant with current labour law regulations across India.
+![Security Guard Hiring Cost](https://i.imgur.com/LPq7pmZ.png)
+One should be aware of all the cost components that need to be considered when engaging with any agency before hiring a Security Guard or for that matter any blue-collared employee. [This post](/blog/our-pricing) explains all the cost elements that one needs to be aware of to be fully compliant with current labour law regulations across India.
 
 If you are looking to hire a security guard for an event, you should know that the cost of hiring a security guard in metropolitan cities can be quite high. For instance, in Delhi, the cost of hiring a security guard for an event can be anywhere from Rs. 18,000 to Rs. 33,000, depending on the purpose and duration of the event. Similarly, in Bangalore, the cost can range from Rs. 17,000 to Rs. 30,000. Additionally, the cost of hiring a security guard in Mumbai may be even higher, ranging from Rs. 20,000 to Rs. 40,000.
 
@@ -40,7 +35,7 @@ Once the baseline cost is established, scrutinise the supplementary fees levied 
 - Material Costs: Expenditure on equipment, vehicles, uniforms, etc.
 - Agency Charges: Typically 6-10% of the total cost, contingent on services, personnel count, and payment terms.
 
-## Hourly Hiring Rates[​](http://localhost:3000/blog/security-guard-cost#hourly-hiring-rates)
+## Hourly Hiring Rates
 
 We have listed below the hourly rates for hiring people across India as per the current minimum wages prescribed by various states. Please note that the below prices are for reference purposes and exact pricing can only be provided once we understand all aspects of your requirements.
 
@@ -71,7 +66,7 @@ We have listed below the hourly rates for hiring people across India as per the 
 
 You can use the above table to arrive at an approximate cost. Please note that these prices are indicative and provided to help you arrive at an approximate budget
 
-## Sample Calculation[​](http://localhost:3000/blog/security-guard-cost#sample-calculation)
+## Sample Calculation
 
 For Ex: If you wish to hire a Security Guard for 30 days for 12 hours per day.
 
@@ -87,3 +82,9 @@ You can estimate the pricing by following the above example. However, do bear in
 If you are looking to hire security guard, you can refer to our [Guide to Hiring Security Guards in India](/marketing/hire-security-guards)
 
 We at [Knighthood](http://knighthood.co) have been working with over 200+ organisations for over 5 years. We focus on ensuring high service levels at affordable prices. [*You can read more about why our customers choose to work with us.*](http://knighthood.co/whyus)
+
+## Suggested Reading
+
+- [Why You Should Hire a Security Service](/blog/why-security-agency.md)
+- [Why Choose Knighthood to Hire Security Guards in India](/blog/hire-security-guards)
+- [How to Hire Top-Notch Security Guards](/blog/hire-security-guards-key-considerations)

@@ -90,3 +90,9 @@ A Well crafter security plan is an essential safeguard for your business success
 Investing in the security of your site ensures safety of not only your employees and assets but also your customers. Always remember that a secure business is a thriving business.
 
 We at [Knighthood](http://knighthood.co) have been working with over 200+ organisations for over 5 years. We focus on ensuring high service levels at affordable prices. [*You can read more about why our customers choose to work with us.*](http://knighthood.co/whyus)
+
+## Suggested Reading
+
+- [Conducting a Security Risk Assessment](/blog/risk-assess)
+- [Identify, Assess, Mitigate Risks](/docs/security/planning/risk.md)
+- [Conducting a Security Risk Assessment](/blog/risk-assess)

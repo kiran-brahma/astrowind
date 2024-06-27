@@ -37,3 +37,4 @@ The presence of mobile patrol security at a construction site can give both work
 In conclusion, mobile patrol security services offer a flexible, adaptable, and effective solution for protecting construction sites and their workers. From acting as a strong deterrent against crime to ensuring that all areas of the site are secure, mobile patrol security services provide numerous benefits for construction site security.
 
 We at [Knighthood](http://knighthood.co) have been working with over 200+ organisations for over 5 years. We focus on ensuring high service levels at affordable prices. [*You can read more about why our customers choose to work with us.*](http://knighthood.co/whyus)
+

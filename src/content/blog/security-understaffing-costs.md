@@ -80,3 +80,7 @@ Do bear in mind that y investing in adequate staffing and the right technology, 
 
 Don't let short-sighted cost-cutting jeopardise your company's security. [Schedule a call](/contact) with us today to learn how we can help you develop a comprehensive and cost-effective [security plan](/security/intro) that leverages both technology and human expertise.
 
+## Suggested Reading
+- [Why Hire Professional Security Guard Services](/blog/benefits-security-guards-agency)
+- [Your Complete Guide to Hiring Security Guards in India](/marketing/hire-security-guards)
+- [Why Engage a Professional Security Services](/blog/security-service)

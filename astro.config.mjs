@@ -2,6 +2,7 @@ import path from 'path';
 import starlight from '@astrojs/starlight';
 import vercel from '@astrojs/vercel/static';
 import compress from 'astro-compress';
+import pagefind from "astro-pagefind";
 
 
 import { fileURLToPath } from 'url';
@@ -142,6 +143,7 @@ export default defineConfig({
       lastmod: new Date('2024-06-16'),
     }),
     mdx(),
+    pagefind(),
     icon({
       include: {
         tabler: ['*'],

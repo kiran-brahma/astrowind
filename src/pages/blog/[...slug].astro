@@ -16,9 +16,20 @@ export async function getStaticPaths() {
 
 const post = Astro.props;
 const { Content } = await post.render();
+
+const metadata =
+{
+  title: post.data.title ,
+  description: post.data.excerpt ,
+  image: post.data.image ,
+  openGraph: {
+    type: 'blog',
+  },
+
+}
 ---
 
-<Layout>
+<Layout metadata={metadata}>
   <main>
     <article class="prose mx-auto dark:prose-invert">
         <div class="prose-h1 text-center">
@@ -37,11 +48,10 @@ const { Content } = await post.render();
               >Published on <FormattedDate date={post.data.date} />
               </small>
           </div>
-          <Image src={post.data.image} alt={post.data.title} inferSize/>
         </div>
         <div class="prose-img:rounded-lg">
           {
-            post.data.imager && (
+            post.data.image && (
               <Image src={post.data.image} alt={post.data.title} inferSize/>
             )
           }

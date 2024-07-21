@@ -1,6 +1,6 @@
 ---
 title: "Expert Security Guard Services: Ensuring Safety in Every Sector"
-excerpt: "Expert security guards for every sector! ️ Knighthood provides customised security solutions for businesses, events & residences. Get a free quote today! #security #safety #peaceofmind"
+excerpt: "Expert security guards for every sector. Knighthood provides customised security solutions for businesses, events & residences"
 date: 2024-07-14
 image: https://i.imgur.com/kDYwM9b.png
 tags:
@@ -12,7 +12,7 @@ In today's world, security is paramount. Whether you're running a business, mana
 
 Knighthood boasts a team of **highly trained and experienced security professionals** dedicated to providing exceptional security solutions across diverse sectors. From **manpower guarding** to **integrated security systems**, Knighthood tailors its services to meet the unique needs of each client, ensuring **comprehensive protection** and **unwavering peace of mind**.
 
-![Knighthood Security Services](https://knighthood.co/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1689337381804%2F292d963a-025b-451a-9c5f-52e853c8d09b.jpeg&w=1200&q=75)
+![Knighthood Security Services](https://i.imgur.com/hg3p0Zt.jpeg)
 ## Why Choose Knighthood Services?
 
 Here are just a few reasons why Knighthood stands out as the trusted partner for your security needs:

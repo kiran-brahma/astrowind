@@ -7,6 +7,16 @@ import { Image } from 'astro:assets';
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+const metadata =
+{
+  title: "Knighthood Blog" ,
+  description: "Knighthood Blog where we share our latest learning and insights related to manpower and secrurity services across India",
+  image: 'src/assets/images/default.png',
+  openGraph: {
+    type: 'blog',
+  },
+
+}
 ---
 
 <!doctype html>
@@ -15,7 +25,7 @@ const posts = (await getCollection('blog')).sort(
 
   </head>
   <body>
-    <Layout>
+    <Layout metadata={metadata}>
       <Container>
         <main class="max-w-6xl mx-auto p-4">
           <!-- Heading and Subtitle -->

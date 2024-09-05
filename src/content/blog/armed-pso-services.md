@@ -1,8 +1,8 @@
 ---
 title: "Armed PSO Services: Reinforcing Security Measures with Professionalism"
-excerpt: Knighthood's Armed PSO Services provide professional security measures to safeguard your property and assets.
+excerpt: "Knighthood's Armed PSO Services provide professional security measures to safeguard your property and assets."
 date: 2024-03-06
-image: https://i.imgur.com/yMLOYYH.png
+image: "https://i.imgur.com/yMLOYYH.png"
 tags:
   - Security
 

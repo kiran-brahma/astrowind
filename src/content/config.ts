@@ -4,6 +4,7 @@ import { docsSchema } from '@astrojs/starlight/schema';
 const metadataDefinition = () =>
   z.object({
     title: z.string().optional(),
+    image: z.string().optional(),
     ignoreTitleTemplate: z.boolean().optional(),
     canonical: z.string().url().optional(),
     robots: z.object({
@@ -41,6 +42,8 @@ const blog = defineCollection({
     category: z.array(z.string()).optional(),
     tags: z.array(z.string()),
     author: z.string().optional(),
+    metadata: metadataDefinition(),
+
   }),
 });
 

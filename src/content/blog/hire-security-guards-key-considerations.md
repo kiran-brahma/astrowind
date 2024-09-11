@@ -2,7 +2,7 @@
 title: How to Hire Top-Notch Security Guards
 excerpt: Hiring Security Guards? Learn how to vet agencies, evaluate capabilities, and find reliable partners that are focussed to meet your needs
 date: 2024-05-20
-image: https://scontent.xx.fbcdn.net/v/t1.15752-9/448497444_838981924304324_7791580460582321979_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Q-xKUVh-YFMQ7kNvgGYbHT5&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGqkQFnDTMbEy53snDii4doklyDsaAYCNVdWbBRkT5tdQ&oe=66A4FA01
+image: https://i.imgur.com/ooWnHmX.png
 tags:
   - Security
 ---

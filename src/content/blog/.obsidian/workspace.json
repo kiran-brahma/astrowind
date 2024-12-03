@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "e35f0b22a271ad9c",
+    "type": "split",
+    "children": [
+      {
+        "id": "7cb44fa8835357d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a21c0769e248806",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "secure-your-business.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "secure-your-business"
+            }
+          },
+          {
+            "id": "5d18353b8242cc74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "security-report.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "security-report"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cc6a70a502fd0894",
+    "type": "split",
+    "children": [
+      {
+        "id": "7bfa4461c1053a63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60ff194f8bcca947",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "73d73859ac900022",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "acc08c17d32268ab",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "214307963485ab3c",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9662a8968433098",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e726661da74e5d74",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "secure-your-business.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for secure-your-business"
+            }
+          },
+          {
+            "id": "5fe12c9f9326b7e9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "secure-your-business.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from secure-your-business"
+            }
+          },
+          {
+            "id": "fb997988bae130ba",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3e5cd1a1942a87bc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "secure-your-business.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of secure-your-business"
+            }
+          },
+          {
+            "id": "be84dbd4a25af389",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Smart Connections"
+            }
+          },
+          {
+            "id": "c9012cca7cce0e1e",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "smart-connections:Open: View Smart Connections": false,
+      "smart-connections:Open: Smart Chat Conversation": false
+    }
+  },
+  "active": "9a21c0769e248806",
+  "lastOpenFiles": [
+    "security-report.md",
+    "secure-your-business.md",
+    "e-commerce-security.md",
+    "security-service.md",
+    "security-operations-management.md",
+    "smart-chats",
+    "contact.md",
+    "image.png"
+  ]
+}

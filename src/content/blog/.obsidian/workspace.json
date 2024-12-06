@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7cb44fa8835357d0",
+        "id": "6fa8873f0d6eb204",
         "type": "tabs",
         "children": [
           {
-            "id": "af3d3149a55b7eb9",
+            "id": "86d294336959c4b4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "hiring-security-guards-india.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "hiring-security-guards-india"
+              "title": "New tab"
             }
           }
         ]
@@ -151,8 +147,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "smart-connections",
-              "title": "Smart Connections"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -185,16 +181,16 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "af3d3149a55b7eb9",
+  "active": "86d294336959c4b4",
   "lastOpenFiles": [
-    "secure-your-business.md",
     "securing-your-space.md",
+    "secure-your-business.md",
     "hiring-security-guards-india.md",
+    "benefits-security-guards-agency.md",
     "security-report.md",
     "hire-security-guards-key-considerations.md",
     "our-pricing.md",
     "image.png",
-    "benefits-security-guards-agency.md",
     "Untitled",
     "contact.md",
     "e-commerce-security.md",

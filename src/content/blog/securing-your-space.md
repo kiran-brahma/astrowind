@@ -3,7 +3,7 @@ title: Securing Your Space - A Holistic Approach to Organizational Safety
 excerpt: A comprehensive guide to creating a robust security plan for a new location
 date: 2024-12-06
 image: https://i.imgur.com/LxnDM9B.jpeg
-slug: benefits-security-guards-agency
+slug: securing-your-space
 tags:
   - Security
 ---

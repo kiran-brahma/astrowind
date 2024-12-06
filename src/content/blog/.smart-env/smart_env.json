@@ -6,7 +6,8 @@
   "smart_sources": {
     "embed_model": {
       "model_key": "TaylorAI/bge-micro-v2",
-      "legacy_transformers": true
+      "legacy_transformers": true,
+      "transformers": {}
     },
     "smart_change": {
       "active": true
@@ -14,6 +15,22 @@
   },
   "file_exclusions": "Untitled",
   "folder_exclusions": "smart-chats",
+  "smart_view_filter": {
+    "render_markdown": true,
+    "show_full_path": false
+  },
   "excluded_headings": "",
-  "smart_chats_folder": "smart-chats"
+  "smart_chats_folder": "smart-chats",
+  "smart_directories": {},
+  "smart_threads": {
+    "chat_model": {
+      "adapter": "openai",
+      "openai": {
+        "model_key": "gpt-4o"
+      }
+    },
+    "embed_model": {
+      "model_key": "None"
+    }
+  }
 }

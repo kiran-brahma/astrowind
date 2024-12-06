@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9a21c0769e248806",
+            "id": "af3d3149a55b7eb9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "secure-your-business.md",
+                "file": "hiring-security-guards-india.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "secure-your-business"
-            }
-          },
-          {
-            "id": "5d18353b8242cc74",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "security-report.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "security-report"
+              "title": "hiring-security-guards-india"
             }
           }
         ]
@@ -184,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,15 +185,21 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "9a21c0769e248806",
+  "active": "af3d3149a55b7eb9",
   "lastOpenFiles": [
-    "security-report.md",
     "secure-your-business.md",
+    "securing-your-space.md",
+    "hiring-security-guards-india.md",
+    "security-report.md",
+    "hire-security-guards-key-considerations.md",
+    "our-pricing.md",
+    "image.png",
+    "benefits-security-guards-agency.md",
+    "Untitled",
+    "contact.md",
     "e-commerce-security.md",
     "security-service.md",
     "security-operations-management.md",
-    "smart-chats",
-    "contact.md",
-    "image.png"
+    "smart-chats"
   ]
 }

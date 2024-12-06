@@ -85,6 +85,6 @@ We at [Knighthood](http://knighthood.co) have been working with over 200+ orga
 
 ## Suggested Reading
 
-- [Why You Should Hire a Security Service](/blog/why-security-agency.md)
-- [Why Choose Knighthood to Hire Security Guards in India](/blog/hire-security-guards)
-- [How to Hire Top-Notch Security Guards](/blog/hire-security-guards-key-considerations)
+- [Why You Should Hire a Security Service](why-security-agency)
+- [Why Choose Knighthood to Hire Security Guards in India](hire-security-guards)
+- [How to Hire Top-Notch Security Guards](hire-security-guards-key-considerations)

@@ -96,6 +96,6 @@ We don't just provide security solutions—we partner with you to create a holis
 
 
 ## Related Reading
-- [How to Hire Top-Notch Security Guards](/hire-security-guards-key-considerations)
-- [The Basics of Hiring a Security Guard in India](/hiring-security-guards-india)
-- [Cost of Hiring a Security Guard in India](/security-guard-cost)
+- [How to Hire Top-Notch Security Guards](hire-security-guards-key-considerations)
+- [The Basics of Hiring a Security Guard in India](hiring-security-guards-india)
+- [Cost of Hiring a Security Guard in India](security-guard-cost)

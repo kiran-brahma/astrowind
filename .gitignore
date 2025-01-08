@@ -8,6 +8,9 @@ src/content/.obsidian
 src/content/post/.obsidian
 src/content/template
 src/content/.smart-env
+src/content/blog/.obsidian
+src/content/blog/.smart-env
+src/content/blog/smart-chats
 
 # dependencies
 node_modules/

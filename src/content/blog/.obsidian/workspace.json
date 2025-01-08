@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7fdf7cda57fc5fc8",
+        "id": "92360e87a3a20d86",
         "type": "tabs",
         "children": [
           {
-            "id": "279ea9b8bf4cdcdd",
+            "id": "af43eeac10922a8f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -181,7 +181,7 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "279ea9b8bf4cdcdd",
+  "active": "af43eeac10922a8f",
   "lastOpenFiles": [
     "security-guard-cost.md",
     "hiring-security-guards-india.md",

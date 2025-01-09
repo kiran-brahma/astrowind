@@ -59,8 +59,7 @@ export const footerData = {
       title: 'Company',
       links: [
         { text: 'About Us', href: '/about' },
-        { text: 'Careers', href: 'https://careers.knighthood.co' },
-        { text: 'Work Opportunities', href: 'https://careers.knighthood.co/employment-opportunities' },
+        { text: 'Careers', href: 'https://knighthoodcareers.notion.site/' },
         { text: 'Resources', href: '/docs' },
         { text: 'Contact', href: '/contact' },
       ],
@@ -74,10 +73,11 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/kncorps' },
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/kncorp' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/sitemap.xml') },
   ],
   footNote: `
     <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="/logo.png" alt="onWidget logo" loading="lazy"></img>
-    Knighthood Corporate Services Pvt Ltd. All rights reserved.
+    <b>Knighthood Corporate Services Pvt Ltd. </b>
+    <p>All rights reserved.</p>
   `,
 };

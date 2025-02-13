@@ -32,6 +32,7 @@ const whenExternalScripts = (items = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
+  site: 'https://knighthood.co',
   output: 'static',
   adapter: vercel(
     {webAnalytics: {
@@ -140,7 +141,7 @@ export default defineConfig({
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
-      lastmod: new Date('2024-06-16'),
+      lastmod: new Date('2025-02-13'),
     }),
     mdx(),
     pagefind(),

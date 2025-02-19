@@ -2,7 +2,7 @@
 title: "Bouncer Services: Elevating Security Standards for Events and Venues"
 excerpt: Worried about security at your event or venue? Knighthood's services ensure a safe and enjoyable experience for all. Contact us today!
 date: 2024-03-06
-image: https://knighthood.co/bouncer.jpg
+image: https://i.imgur.com/woMGfhS.png
 tags:
   - Security
 ---

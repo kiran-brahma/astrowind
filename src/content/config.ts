@@ -47,6 +47,23 @@ const blog = defineCollection({
   }),
 });
 
+const update = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    excerpt: z.string(),
+    lastModified: z.string().optional(),
+    image: z.string(),
+    coverAlt: z.string().optional(),
+    category: z.array(z.string()).optional(),
+    tags: z.array(z.string()),
+    author: z.string().optional(),
+    metadata: metadataDefinition(),
+
+  }),
+});
+
 const marketingCollection = defineCollection({
   schema: z.object({
     date: z.date().optional(),
@@ -61,5 +78,6 @@ const marketingCollection = defineCollection({
 export const collections = {
   docs: defineCollection({ schema: docsSchema() }),
   blog,
+  updates,
   marketing: marketingCollection,
 };

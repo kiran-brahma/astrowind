@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import Layout from '~/layouts/PageLayout.astro';
+
+
+import { Image } from "astro:assets";
+import FormattedDate from '../../components/FormattedDate.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection("update");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+
+const metadata =
+{
+  title: post.data.title ,
+  description: post.data.excerpt ,
+  image: post.data.image ,
+  openGraph: {
+    type: 'article',
+    image: post.data.image ,
+    title: post.data.title ,
+    description: post.data.excerpt ,
+  },
+
+}
+---
+
+<Layout metadata={metadata}>
+  <main>
+    <article class="prose prose-stone prose-neutral text-black prose-headings:text-black dark:prose-headings:text-gray-100 dark:prose-invert dark:text-gray-200 mx-auto">
+                    <div class="prose-h1 text-black text-center">
+          <h1>{post.data.title}</h1>
+          <div class="prose-a:no-underline">
+            
+          </div>
+          <div class="flex justify-between">
+            <small
+              >Published on <FormattedDate date={post.data.date} />
+              </small>
+          </div>
+        </div>
+        <div class="prose-img:rounded-lg">
+          {
+            post.data.image && (
+              <Image src={post.data.image} alt={post.data.title} class ="mx-auto" width="100" height={100}/>
+            )
+          }
+        </div>
+        <div>
+          <Content />
+        </div>
+        
+    </article>
+    
+  </main>
+</Layout>

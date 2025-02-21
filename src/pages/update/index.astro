@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+import Container from '../../components/container.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { Image } from 'astro:assets';
+const posts = (await getCollection('update')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const metadata =
+{
+  title: "Knighthood Updates" ,
+  description: "Knighthood sharing updates related to manpower and secrurity services across India",
+  image: 'src/assets/images/default.png',
+  openGraph: {
+    type: 'blog',
+  },
+
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+  </head>
+  <body>
+    <Layout metadata={metadata}>
+      <Container>
+        <main class="max-w-6xl mx-auto p-4">
+          <!-- Heading and Subtitle -->
+          <header class="mb-8">
+            <h1 class="text-4xl font-bold text-center p-10">Welcome to Knighthood</h1>
+            <p class="text-lg text-center p-20 mt-2">Knighthood sharing updates related to manpower and secrurity services across India.</p>
+          </header>
+          
+          <!-- Blog Posts -->
+          <section>
+            <div class="grid grid-cols-2 gap-5">
+              {posts.map((post) => (
+                <div key={post.slug} class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 p-4 border-b">
+                  <div>
+                    <Image class="mx-auto" src={post.data.image} alt={post.data.title} width="200" height="200"/>
+                    <a href={`/update/${post.slug}`} class="text-xl font-bold text-blue-600 hover:text-blue-800">
+                      {post.data.title}
+                    </a>
+                    
+                    <p class="text-gray-600">
+                      <FormattedDate date={post.data.date} />
+                    </p>
+                  </div>
+                  <div>
+                    <p>{post.data.excerpt}</p>
+                    <div class="prose-a:no-underline">
+            
+          </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
+      </Container>
+    </Layout>
+  </body>
+</html>

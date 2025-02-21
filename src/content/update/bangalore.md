@@ -3,7 +3,7 @@ slug: security-bangalore
 title: Hire Professional Security Guards in Bangalore
 excerpt: Knighthood provides professional security services in Bangalore. Contact us to Hire Now.
 keyword: security, hire, bangalore, karnataka
-date: 2021-10-4
+date: 2023-07-19
 authors: KN
 image: /logo.png
 ---
@@ -27,7 +27,7 @@ Knighthood’s security guards are well-trained, qualified, and physically fit. 
 
 
 ## Our Operating Procedure
-We have developed a robust [SOP](//security/intro) to ensure that our customers get reliable service that meets their requirements every day. You can read about a sample [case study](/case/case3) from our customer on how we went about ensuring stable security service for a troublesome location.
+We have developed a robust [SOP](/security/intro) to ensure that our customers get reliable service that meets their requirements every day. You can read about a sample [case study](/case/case3) from our customer on how we went about ensuring stable security service for a troublesome location.
 
 ## Cost
 
@@ -63,6 +63,8 @@ Here are some of the duties and responsibilities our security guards do:
 - Report any questionable activity.
 
 Hire a security guard to keep your premises, business, assets, and employees safe in Bangalore and Karnataka
+
+You can read our guide to understand in more depth on [How to hire Security Gaurds](/marketing/hire-security-guards) 
 
 ## About Knighthood
 

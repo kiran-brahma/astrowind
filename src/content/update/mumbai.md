@@ -3,7 +3,7 @@ slug: security-mumbai_pune
 title: Hire Professional Security Guards in Mumbai and Pune
 excerpt: Knighthood provides professional security services in Mumbai and Pune. Contact us to Hire Now
 keyword: security, hire, mumbai, pune, maharashtra
-date: 2021-10-4
+date: 2023-07-19
 authors: KN
 image: /logo.png
 ---
@@ -61,6 +61,7 @@ Here are some of the duties and responsibilities our security guards do:
 - Report any questionable activity.
 
 Hire a security guard to keep your premises, business, assets, and employees safe in Mumbai, Pune and other areas of Maharashtra.
+You can read our guide to understand in more depth on [How to hire Security Gaurds](/marketing/hire-security-guards) 
 
 ## About Knighthood
 

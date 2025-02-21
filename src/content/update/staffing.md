@@ -3,7 +3,7 @@ slug: staffing_solutions
 title: Staffing Solutions Across India 
 excerpt: Knighthood provides staffing services across India at competitive prices. Learn more here!
 keyword: staffing, hire, India, compliance, quick, 
-date: 2022-07-1
+date: 2023-07-19
 authors: KN
 image: /logo.png
 ---

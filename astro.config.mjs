@@ -1,6 +1,6 @@
 import path from 'path';
 import starlight from '@astrojs/starlight';
-import vercel from '@astrojs/vercel/static';
+import vercel from '@astrojs/vercel';
 import compress from 'astro-compress';
 import pagefind from "astro-pagefind";
 

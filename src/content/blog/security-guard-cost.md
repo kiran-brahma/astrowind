@@ -81,6 +81,12 @@ You can estimate the pricing by following the above example. However, do bear in
 
 If you are looking to hire security guard, you can refer to our [Guide to Hiring Security Guards in India](/marketing/hire-security-guards)
 
+### City Guide
+
+- **New Delhi**: If you are looking to hire security guard in New Delhi, you can refer to our [Guide to Hiring Security Guards in New Delhi](/hire-security-guard-new-delhi-ncr)
+- **Mumbai**: If you are looking to hire security guard in Mumbai, you can refer to our [Guide to Hiring Security Guards in Mumbai](/hire-security-guard-mumbai)
+
+
 We at [Knighthood](http://knighthood.co) have been working with over 200+ organisations for over 5 years. We focus on ensuring high service levels at affordable prices. [*You can read more about why our customers choose to work with us.*](http://knighthood.co/whyus)
 
 ## Suggested Reading

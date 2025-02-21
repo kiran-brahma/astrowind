@@ -57,7 +57,7 @@ const update = defineCollection({
     image: z.string(),
     coverAlt: z.string().optional(),
     category: z.array(z.string()).optional(),
-    tags: z.array(z.string()),
+    tags: z.array(z.string()).optional(),
     author: z.string().optional(),
     metadata: metadataDefinition(),
 
@@ -78,6 +78,6 @@ const marketingCollection = defineCollection({
 export const collections = {
   docs: defineCollection({ schema: docsSchema() }),
   blog,
-  updates,
+  update,
   marketing: marketingCollection,
 };

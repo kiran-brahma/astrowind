@@ -16,8 +16,47 @@
               "icon": "lucide-file",
               "title": "New tab"
             }
+          },
+          {
+            "id": "e6f22442a0eb415e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "hire-security-guards-mumbai.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "hire-security-guards-mumbai"
+            }
+          },
+          {
+            "id": "5e2362fa4f633c1a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "hire-security-guards-delhi-ncr.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "hire-security-guards-delhi-ncr"
+            }
+          },
+          {
+            "id": "49df4e21e8102257",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -182,15 +221,15 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "75303cd77f68afec",
+  "active": "49df4e21e8102257",
   "lastOpenFiles": [
     "hire-security-guards-delhi-ncr.md",
+    "hire-security-guards-mumbai.md",
     "security-guard-cost.md",
     "hire-security-guard-mumbai.md",
     "Pasted image 20250221113238.png",
     "Pasted image 20250221113217.png",
     "hire-security-guard-delhi-ncr.md",
-    "hire-security-guards-mumbai.md",
     "hire-security-guards.md",
     "2025-02-21.md",
     "celeberating-decade-of-operations.md",

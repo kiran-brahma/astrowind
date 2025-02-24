@@ -44,19 +44,9 @@
               "icon": "lucide-file",
               "title": "hire-security-guards-delhi-ncr"
             }
-          },
-          {
-            "id": "49df4e21e8102257",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -221,7 +211,7 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "49df4e21e8102257",
+  "active": "5e2362fa4f633c1a",
   "lastOpenFiles": [
     "hire-security-guards-delhi-ncr.md",
     "hire-security-guards-mumbai.md",

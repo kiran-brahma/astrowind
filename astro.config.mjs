@@ -8,7 +8,7 @@ import pagefind from "astro-pagefind";
 import { fileURLToPath } from 'url';
 import react from '@astrojs/react';
 
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService} from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
@@ -194,6 +194,7 @@ export default defineConfig({
   ],
 
   image: {
+    service: passthroughImageService(),
     remotePatterns: [{ protocol: "https" }],
   },
 

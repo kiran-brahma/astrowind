@@ -5,7 +5,6 @@ dist/
 .vercel
 
 src/content/.obsidian
-src/content/post/.obsidian
 src/content/template
 src/content/.smart-env
 src/content/blog/.obsidian

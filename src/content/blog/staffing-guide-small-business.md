@@ -72,7 +72,7 @@ While it's tempting to try and fill all open positions simultaneously, a more st
 
 For other key roles but not critical, you can engage the [services of a staffing agency](/services/staffing) to ensure that you retain your focus on key roles.
 
-![Analysis](https://plus.unsplash.com/premium_photo-1661587943486-dc3839dd316d?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+![Analysis](https://plus.unsplash.com/premium_photo-1706559780094-648dbe2b2bd0?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 ### Leveraging Flexible Staffing Options
 
 In addition to traditional full-time employees, it's wise to explore and leverage alternative staffing options that can provide your organization with greater flexibility and agility. [Temporary, contract or project-based workers](/services/staffing/cs) can be invaluable resources for supplementing your core team and enabling you to scale your workforce up or down swiftly in response to fluctuations in demand or changes in your business strategy.

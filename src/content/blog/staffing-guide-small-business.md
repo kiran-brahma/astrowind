@@ -35,7 +35,7 @@ In the ever-changing world of business, customer preferences, market trends, and
 For instance, if your e-commerce business typically experiences a surge in sales during the holiday season, it would be wise to [temporarily bolster your customer service and warehouse teams](/blog/flex-staffing) to handle the increased demand. After all, happy customers are the lifeblood of any successful venture.
 
 
-![Hiring](https://plus.unsplash.com/premium_photo-1678917827802-721b5f5b4bf0?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+![Hiring](https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 ## Forecasting Future Needs: Seeing Beyond the Horizon
 
 While addressing your current staffing needs is crucial, it's equally important to look ahead and anticipate the workforce requirements that will support your business's growth and expansion. Think of it as packing the right gear for a hiking adventure - you wouldn't want to be caught unprepared when the terrain gets challenging, would you?

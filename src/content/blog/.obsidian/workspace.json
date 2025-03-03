@@ -37,12 +37,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "benefits-of-mobile-security-patrols-remote-monitoring.md",
+                "file": "staffing-guide-small-business.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "benefits-of-mobile-security-patrols-remote-monitoring"
+              "title": "staffing-guide-small-business"
+            }
+          },
+          {
+            "id": "7bebf7c649041fed",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ],
@@ -206,13 +216,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "copilot:Open Copilot Chat": false,
-      "smart-connections:Open: View Smart Connections": false,
-      "smart-connections:Open: Smart Chat Conversation": false
+      "copilot:Open Copilot Chat": false
     }
   },
   "active": "e09d42a2fb247e7b",
   "lastOpenFiles": [
+    "staffing-guide-small-business.md",
+    "benefits-of-mobile-security-patrols-remote-monitoring.md",
     "hire-security-guard-delhi-ncr.md",
     "hire-security-guards-mumbai.md",
     "hire-security-guards-delhi-ncr.md",

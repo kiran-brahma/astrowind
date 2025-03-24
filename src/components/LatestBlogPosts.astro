@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import LinkButton from './common/LinkButton.astro';
+import Image from 'astro/components/Image.astro';
+
+const latestPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<section class="container py-8 mx-auto">
+  <h2 class="text-3xl font-bold mb-8">Latest Blog Posts</h2>
+  <p class="text-lg text-center p-10">Latest Learnings and Writing from the Knighthood Team. We write about Security Solutions, Video Analytics, Facility Management, Staffing, and Employee Verification.</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {latestPosts.map((post) => (
+      <div class=" rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-2">
+          <a href={`/blog/${post.slug}`} class="hover:text-primary">{post.data.title}</a>
+        </h3>
+        <Image class="mx-auto" src={post.data.image} alt={post.data.title} width="200" height="200"/>
+        <p class="mb-4">{post.data.excerpt}</p>
+        
+      </div>
+    ))}
+  </div>
+</section>

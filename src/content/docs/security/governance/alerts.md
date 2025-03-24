@@ -115,7 +115,6 @@ Develop a guide to refine your alert levels and related security measures. Consu
 
 Your guide will be a key source of information about your security alert levels.
 
-![https://protectivesecurity.govt.nz/assets/Governance/46a78cf925/Alert-level-development-process__ResizedImageWzYwMCw2NzBd.png](https://protectivesecurity.govt.nz/assets/Governance/46a78cf925/Alert-level-development-process__ResizedImageWzYwMCw2NzBd.png)
 
 ## Develop a Communications Plan
 

@@ -8,11 +8,13 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Customers from '../assets/images/customers.webp';
 import Features3 from '~/components/widgets/Features3.astro';
+import LatestBlog from '~/components/LatestBlogPosts.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
+
+import Stats from '../components/common/Stats.astro'
 
 
 const metadata = {
@@ -45,7 +47,11 @@ const metadata = {
       <span class="hidden sm:inline">
         <span class="font-semibold">Simplify your staffing needs with our integrated services for all your blue and grey collar staffing requirements across India </span>
     </Fragment>
+
   </Hero>
+
+  <Stats
+  />
 
   <!-- Note Widget ******************* -->
 
@@ -59,14 +65,7 @@ const metadata = {
   </div>
 <!-- Stats Widget ****************** -->
 
-<Stats
-stats={[
-  { title: 'Customers', amount: '200+' },
-  { title: 'Cities', amount: '85+' },
-  { title: 'Associates', amount: '10,000+' },
-  { title: 'Psara License', amount: '17 States' },
-]}
-/>
+
   <!-- Features Widget *************** -->
 
   <Features
@@ -113,11 +112,20 @@ stats={[
       },
     ]}
   />
-  <center><button class="mx-auto mb-10"><a href="/services" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Explore Our Services</a></a></button></center>
-
-
+  <center>
+    <button class="btn btn-active">
+            <a href="/services">
+        Explore Our Services
+      </a>
+    </button>
+  </center>
 
   <!-- Content Widget **************** -->
+  <Features
+  id="Why Choose Us"
+  tagline="Why Us"
+  title="Why Customers Choose Us"
+  ></Features>
 
   <Content
     isReversed
@@ -156,10 +164,16 @@ stats={[
     </Fragment>
 
   </Content>
-  <center><button class="mx-auto mb-10"><a href="/whyus" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Why Customers Choose Us</a></a></button></center>
+  <center><button class="btn btn-active"><a href="/whyus"> Why Customers Choose Us</a></a></button></center>
 
 
   <!-- Steps Widget ****************** -->
+  <Features
+  id="Connect"
+  tagline="Work with Us"
+  title="Interested in Working With us. Connect Now"
+  ></Features>
+
 
   <Steps
     title="Streamlined staffing services that empower your business to hit the ground running."
@@ -305,6 +319,8 @@ testimonials={[
   
 ]}
 />
+
+<LatestBlog/>
 
   <!-- FAQs Widget ******************* -->
 

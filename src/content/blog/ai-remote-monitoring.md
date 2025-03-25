@@ -5,7 +5,6 @@ tags:
   - AI
   - Remote Monitoring
   - Video Analytics
-cuid: clk6nzv9m00040ami2fcb8u7w
 slug: ai-remote-monitoring
 image: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/gakXaqzGad0/upload/995d519abdf857657e01050ed00ba537.jpeg
 date: 2023-07-19

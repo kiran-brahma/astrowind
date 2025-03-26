@@ -1,8 +1,11 @@
+import keystatic from '@keystatic/astro';
 import path from 'path';
 import starlight from '@astrojs/starlight';
 import vercel from '@astrojs/vercel';
 import compress from 'astro-compress';
 import pagefind from "astro-pagefind";
+import keystatic from '@keystatic/astro'
+import markdoc from '@astrojs/markdoc'
 
 
 import { fileURLToPath } from 'url';
@@ -134,7 +137,7 @@ export default defineConfig({
   
   ]
     }),
-
+  
     tailwind({
       applyBaseStyles: false,
     }),
@@ -191,6 +194,9 @@ export default defineConfig({
       ],
       config: './src/config.yaml',
     }),
+    
+    ...(process.env.NODE_ENV === 'development' ? [] : []),
+    markdoc(),keystatic(),
   ],
 
   image: {

@@ -7,7 +7,7 @@ import { Image } from "astro:assets";
 import FormattedDate from '../../components/FormattedDate.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("marketing");
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
@@ -37,20 +37,8 @@ const metadata =
     <article class="prose prose-stone prose-neutral text-black prose-headings:text-black dark:prose-headings:text-gray-100 dark:prose-invert dark:text-gray-200 mx-auto">
                     <div class="prose-h1 text-black text-center">
           <h1>{post.data.title}</h1>
-          <div class="prose-a:no-underline">
-            {
-              post.data.tags.map((tag) => (
-                <span class="mb-2 mr-2 inline-block rounded-full bg-neutral-200 px-3 py-1 text-sm hover:bg-neutral-500 dark:bg-neutral-600">
-                  {tag}
-                </span>
-              ))
-            }
-          </div>
-          <div class="flex justify-between">
-            <small
-              >Published on <FormattedDate date={post.data.date} />
-              </small>
-          </div>
+          
+          
         </div>
         <div class="prose-img:rounded-lg">
           {

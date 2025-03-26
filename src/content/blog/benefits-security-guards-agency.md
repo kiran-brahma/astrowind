@@ -11,27 +11,31 @@ tags:
 
 
 ## Introduction
+
 While [security guards](/blog/security-guard-types) play an important role in keeping places safe, choosing the right security company is essential for ensuring your guards are effective. The company you partner with can make or break your security program.
 
-Many security companies exist but you should consider more than just pricing when selecting one. 
+Many security companies exist but you should consider more than just pricing when selecting one:
+
 * Reliability
 * Experience
 * Training standards
 * Service quality
-* [Systematic Process](/)
+* [Systematic Process](/docs/security)
 All the above factors play a key role to see if the service is truly value for money. 
-Guards engaged directly or from agencies without clear professional credibility may be cheaper guards but they lack proper training, costing you more in losses from theft, vandalism and crime over time.   
+Guards engaged directly or from agencies without clear professional credibility may be cheaper guards but they lack proper training, costing you more in losses from theft, vandalism and crime over time.
 
 ## Why Professional Security Guards
+
 Professional guards do much more than regular security guards. They undergo comprehensive training to handle any situation from theft and assaults to disputes, medical emergencies and fires. They patrol designated areas, monitor premises 24/7 and may use weapons to enhance security.
 
-As awareness of security needs grows, so does the demand for professional guards. However, not all companies can deliver high-quality services. Many lack the proper processes, guard training and experience required to effectively secure premises.   
+As awareness of security needs grows, so does the demand for professional guards. However, not all companies can deliver high-quality services. Many lack the proper processes, guard training and experience required to effectively secure premises.
 
 A reliable security company has a clear and robust security process that its guards follow consistently across locations. The guards are hardworking, determined and receive ongoing refresher training. The company offers a wide range of security and facility management services beyond just guards like CCTV, access control, alarm monitoring and more.  
 
 While technology like [CCTV](/services/security/ess/cctv) assists, well-trained security guards remain essential. Proper training, skills, experience and tools enable guards to prevent and respond to incidents effectively. Untrained guards relying solely on technology often fail to identify and resolve issues before they escalate.
 
 ## Benefits of Security Guards
+
 <Image src="/guard.png" alt="Security Guard" width="300" height="300" className="mx-auto"/>
 
 • **Deter thieves**: A Security guard's constant presence and ability to quickly respond to any theft attempts minimise losses from theft and property damage.
@@ -53,6 +57,7 @@ While technology like [CCTV](/services/security/ess/cctv) assists, well-trained 
 • **Patrolling**: Security Guards continuously patrol premises, especially at night, to ensure grounds remain secure. To ensure better security, it is recommended to utilise services of [remote monitoring](/services/security/ess/remote) with the aid of [video analytics](/services/security/ess/video_analytics). This provides around-the-clock security and peace of mind.
 
 ## How to Choose Right Security Agency
+
 <Image src="/select.png" alt="Choosing Proper Security Agency" width="300" height="300" className="mx-auto"/>
 
 
@@ -87,4 +92,5 @@ At Knighthood Security, we focus on:
 To learn more about why our clients choose to work with us and our affordable pricing, feel free to visit our [website](/whyus) or [contact us](/contact) directly. We welcome the opportunity to discuss your specific security requirements and tailor a comprehensive solution just for you.  
 
 ## Conclusion
+
 In summary, professional security guards with the right training, tools and experience can significantly improve the safety, security and overall performance of your organization. However, partnering with the right security company that invests in its people and processes is equally if not more important. With the right provider, your guards will become an invaluable asset that helps enable your business operations, growth and success.

@@ -30,17 +30,9 @@ content:
         label: Image Alt Text
         type: string
         required: false
-      - name: category
-        label: Categories
-        type: list
-        required: false
       - name: tags
         label: Tags
         type: list
-      - name: author
-        label: Author
-        type: string
-        required: false
       - name: body
         label: Content
         type: rich-text
@@ -72,17 +64,9 @@ content:
         label: Image Alt Text
         type: string
         required: false
-      - name: category
-        label: Categories
-        type: list
-        required: false
       - name: tags
         label: Tags
         type: list
-        required: false
-      - name: author
-        label: Author
-        type: string
         required: false
       - name: body
         label: Content

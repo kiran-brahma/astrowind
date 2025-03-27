@@ -1,0 +1,41 @@
+---
+export interface Props {
+  quote: string;
+  author: string;
+  position: string;
+  company: string;
+  industry: string;
+}
+
+const { quote, author, position, company, industry } = Astro.props;
+---
+
+<div class="testimonial-card bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+  <div class="quote-mark text-4xl text-blue-600 dark:text-blue-400 opacity-50 mb-4">"</div>
+  
+  <p class="quote text-gray-700 dark:text-gray-300 italic mb-6">{quote}</p>
+  
+  <div class="testimonial-author">
+    <div class="author-avatar bg-gray-200 dark:bg-gray-700 w-12 h-12 rounded-full flex items-center justify-center text-gray-500 dark:text-gray-400 mb-3">
+      <span class="text-xl font-bold">{author.charAt(0)}</span>
+    </div>
+    
+    <h4 class="author-name font-bold text-lg text-gray-900 dark:text-white">{author}</h4>
+    
+    <p class="author-title text-gray-600 dark:text-gray-400">{position}</p>
+    
+    <div class="company-details mt-2">
+      <span class="company-name text-blue-600 dark:text-blue-400">{company}</span>
+      <span class="industry-tag inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded ml-2">
+        {industry}
+      </span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .quote-mark {
+    font-family: 'Georgia', serif;
+    line-height: 1;
+  }
+</style>

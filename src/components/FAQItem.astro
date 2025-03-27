@@ -1,0 +1,70 @@
+---
+export interface Props {
+  question: string;
+  answer: string;
+}
+
+const { question, answer } = Astro.props;
+
+// Generate a unique ID for each FAQ item to link the schema
+const id = `faq-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+<div class="faq-item mb-6 border-b border-gray-200 dark:border-gray-700 pb-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <h3 
+    class="faq-question text-xl font-semibold mb-3 flex justify-between items-center cursor-pointer text-gray-900 dark:text-white" 
+    id={id}
+    itemprop="name"
+  >
+    {question}
+    <svg 
+      class="w-6 h-6 transform transition-transform duration-300 toggle-icon" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </h3>
+  
+  <div 
+    class="faq-answer text-gray-600 dark:text-gray-400 hidden mt-2 pl-0" 
+    itemscope 
+    itemprop="acceptedAnswer" 
+    itemtype="https://schema.org/Answer"
+  >
+    <div itemprop="text">
+      {answer}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Toggle FAQ answers
+  document.addEventListener('DOMContentLoaded', () => {
+    const questions = document.querySelectorAll('.faq-question');
+    
+    questions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('.toggle-icon');
+        
+        // Toggle answer visibility
+        answer.classList.toggle('hidden');
+        
+        // Rotate icon
+        if (icon.classList.contains('rotate-180')) {
+          icon.classList.remove('rotate-180');
+        } else {
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+    
+    // Open the first FAQ by default
+    if (questions.length > 0) {
+      questions[0].click();
+    }
+  });
+</script>

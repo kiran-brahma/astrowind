@@ -1,55 +1,119 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
-import type { MetaData } from '~/types';
+import { MetaData } from '~/types';
 
 export interface Props {
-  frontmatter?: {
+  frontmatter: {
     title?: string;
     description?: string;
     image?: string;
-    imageAlt?: string; // Added imageAlt to frontmatter
+    publishDate?: string;
+    updateDate?: string;
+    category?: string;
+    tags?: Array<string>;
+    canonical?: string;
+    readingTime?: string;
+    draft?: boolean;
   };
 }
 
 const { frontmatter } = Astro.props;
 
-
 const metadata: MetaData = {
   title: frontmatter?.title,
   description: frontmatter?.description,
+  image: frontmatter?.image,
+  publishDate: frontmatter?.publishDate,
+  canonical: frontmatter?.canonical,
 };
-
 ---
 
 <Layout metadata={metadata}>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
-    <h1 class="font-bold prose-stone dark:prose-invert font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">
-      {frontmatter?.title}
-    </h1>
-    <div
-      class="mx-auto prose-stone prose-lg max-w-4xl dark:prose-invert  text-black dark:text-white prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
-    >
-      <slot />
-    </div>
-  </section>
-
-  <CallToAction
-    actions={[
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+    <article>
+      <header class="text-center mb-8 md:mb-12">
+        {
+          frontmatter.category && (
+            <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
+              {frontmatter.category}
+            </p>
+          )
+        }
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+          {frontmatter.title}
+        </h1>
+        <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+          {
+            frontmatter.publishDate && (
+              <span class="text-sm text-muted flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+                  <path d="M16 3v4"></path>
+                  <path d="M8 3v4"></path>
+                  <path d="M4 11h16"></path>
+                  <path d="M11 15h1"></path>
+                  <path d="M12 15v3"></path>
+                </svg>
+                <time datetime={frontmatter.publishDate}>
+                  {new Date(frontmatter.publishDate).toLocaleDateString('en-us', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                </time>
+              </span>
+            )
+          }
+          {
+            frontmatter.readingTime && (
+              <span class="text-sm text-muted flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                  <path d="M12 7l0 5l3 3"></path>
+                </svg>
+                {frontmatter.readingTime}
+              </span>
+            )
+          }
+        </div>
+      </header>
+      
       {
-        variant: 'primary',
-        text: 'Schedule a Call',
-        href: '/contact',
-        target: '_blank',
-        icon: 'tabler:phone-outgoing',
-      },
-    ]}
-  >
-    <Fragment slot="subtitle">
-      Connect with us to see how we can help you in your Security and Staffing needs for your Business.
-    </Fragment>
-  </CallToAction>
+        frontmatter.image && (
+          <figure class="mb-8 md:mb-12">
+            <img 
+              src={frontmatter.image} 
+              alt={frontmatter.title || 'Featured image'} 
+              class="w-full rounded-lg shadow-md"
+              width="1280"
+              height="640"
+            />
+          </figure>
+        )
+      }
+
+      <div class="prose prose-lg dark:prose-invert mx-auto">
+        <slot />
+      </div>
+
+      {
+        frontmatter.tags && frontmatter.tags.length > 0 && (
+          <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex flex-wrap gap-2">
+              {frontmatter.tags.map((tag) => (
+                <a
+                  href={`/tag/${tag.toLowerCase()}`}
+                  class="text-sm bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition duration-300"
+                >
+                  #{tag}
+                </a>
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </article>
+  </div>
 </Layout>

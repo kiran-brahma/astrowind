@@ -1,432 +1,374 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import { Image } from 'astro:assets';
-import Cities from "~/components/common/Cities.astro"
-import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Customers from '../assets/images/customers.webp';
-import Features3 from '~/components/widgets/Features3.astro';
-import LatestBlog from '~/components/LatestBlogPosts.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '../layouts/PageLayout.astro';
 
-import Stats from '../components/common/Stats.astro'
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialsCard.astro';
+import StatsCounter from '../components/StatsCounter.astro';
+import ClientLogo from '../components/ClientsLogo.astro';
+import FAQItem from '../components/FAQItem.astro';
 
+// Get site data from config.yaml
+import { getConfigData } from '~/utils/config';
+const site = getConfigData().site;
 
 const metadata = {
-  title: 'Knighthood',
-  ignoreTitleTemplate: true,
+  title: 'Security, Facility and Staffing Solutions across India | Professional Staffing Services',
+  description: 'Simplify your blue and grey collar staffing needs with Knighthood\'s integrated security, facility management and staffing solutions across India. 85% client retention rate with Pan-India presence.',
+  canonical: site.site,
 };
+
+const services = [
+  {
+    title: "Security Services",
+    description: "Specialized guarding and tech-enabled security solutions designed to protect your assets and personnel across India. Our trained professionals ensure round-the-clock safety for your business.",
+    icon: "shield",
+    link: "/services/security"
+  },
+  {
+    title: "Facility Management",
+    description: "Comprehensive facility maintenance solutions ensuring proper functioning of your business premises every day. From cleaning to technical maintenance, we keep your workspace running smoothly.",
+    icon: "building",
+    link: "/services/facility-management"
+  },
+  {
+    title: "Staffing Solutions",
+    description: "Reliable contractual workforce solutions that align with your business goals and timelines. We handle recruitment, training, and management to deliver qualified staff when you need them.",
+    icon: "users",
+    link: "/services/staffing"
+  },
+  {
+    title: "Payroll Solutions",
+    description: "End-to-end employee lifecycle management with accurate payroll processing and compliance management. Our solutions reduce administrative burden while ensuring regulatory adherence.",
+    icon: "document",
+    link: "/services/payroll"
+  },
+  {
+    title: "Employee Verification",
+    description: "Comprehensive profiling and screening of potential hires with thorough background checks. Our verification process helps minimize hiring risks and ensures quality recruitment.",
+    icon: "check-circle",
+    link: "/services/verification"
+  },
+  {
+    title: "Business Solutions",
+    description: "Complete suite of services tailored for Startups & MSMEs to support their growth journey. Get enterprise-level support at budget-friendly rates for your emerging business.",
+    icon: "briefcase",
+    link: "/services/business-solutions"
+  }
+];
+
+const stats = [
+  {
+    title: "5 Year Retention",
+    value: "85%",
+    description: "Customers been with us for over 5 years"
+  },
+  {
+    title: "SLA",
+    value: "99.1%",
+    description: "Across all solutions"
+  },
+  {
+    title: "PSARA License",
+    value: "17",
+    description: "Indian States"
+  },
+  {
+    title: "Associates",
+    value: "30k+",
+    description: "Who have worked with us"
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Knighthood provided an outstanding security service even in the most challenging of locations. We were incredibly impressed with the quality of their service and dedication to meeting our needs.",
+    author: "Akash Trivedi",
+    position: "Zonal Head - North",
+    company: "Proconnect Logistics",
+    industry: "Logistics"
+  },
+  {
+    quote: "When we shifted to Knighthood from a well renowned security player, we were able to save 10% on our costs without any reduction in service quality when it comes to security services. It was a great decision that has paid off for us in the long run.",
+    author: "Rajesh Singh",
+    position: "Operations Head",
+    company: "SpiceXpress",
+    industry: "Aviation"
+  },
+  {
+    quote: "We were amazed at the speed of deployment of labour for warehouses across India that Knighthood provided. They were reliable and efficient, surpassing all of our expectations.",
+    author: "Ajay Kanwar",
+    position: "COO",
+    company: "Holisol Logistics",
+    industry: "Supply Chain"
+  }
+];
+
+const faqs = [
+  {
+    question: "How much does it cost to hire a security guard in India?",
+    answer: "Hiring a security guard in India typically costs between Rs. 17,000-40,000 per month in metropolitan cities, depending on location, experience level, and specific requirements. Our transparent pricing ensures you get the best value for your security investment. Contact us for a detailed quote based on your specific needs."
+  },
+  {
+    question: "Is your pricing fixed throughout the contract period?",
+    answer: "Our pricing structure is designed with transparency and compliance in mind. It primarily consists of cost components determined by state and central government regulations, which can vary over time. We diligently monitor these changes and adjust our pricing accordingly to ensure adherence to all applicable laws while maintaining competitive rates."
+  },
+  {
+    question: "Why are your prices different when compared to your competitors?",
+    answer: "Our fair pricing is consistent for similar services and locations. Beware of competitors with unrealistically low rates, which may hide outdated costs or non-compliance risks. We offer competitive pricing aligned with top providers, ensuring savings and peace of mind while maintaining full regulatory compliance."
+  }
+];
+
+const industriesServed = [
+  "Aviation", "Banking", "Retail", "Telecom", "Logistics", "Manufacturing", 
+  "E-Commerce", "Education", "Construction", "Government", "Automobile", "Healthcare"
+];
+
+const clientLogos = ["flipkart", "spicejet", "gati", "dtdc", "bls", "redtape", "holisol", "benetton", "bmw", "honda", "proconnect", "nwcc"];
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero Section -->
+  <section>
+    <div class="mx-auto prose-stone prose-lg max-w-4xl dark:prose-invert text-black dark:text-white prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8">
+      <div class="py-16 md:py-24">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Security, Facility and Staffing Solutions across India
+        </h1>
+        <p class="text-xl md:text-2xl mb-12">
+          Simplify your staffing needs with our integrated services for all your blue and grey collar staffing requirements across India. 30,000+ associates deployed with 99.1% SLA compliance.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/services" class="btn-secondary inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-bold py-3 px-6 rounded-lg border border-blue-600 dark:border-blue-400 transition duration-300">
+            Explore Our Services
+          </a>
+          <a href="/contact" class="btn-secondary inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-bold py-3 px-6 rounded-lg border border-blue-600 dark:border-blue-400 transition duration-300">
+            Schedule a Call
+          </a>
+        </div>
+      </div>
 
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Our Services',
-        href: '/services',
-        target: '_blank',
-        icon: 'tabler:report',
-      },
-      { text: 'Schedule a Call', href: '/contact' },
-    ]}
-    
-  >
-    <Fragment slot="title">
-      Security, Facility and Staffing Solutions. 
-    </Fragment>
+      <!-- Stats Section -->
+      <div class="py-16 bg-gray-50 dark:bg-gray-900 -mx-8 px-8 my-12">
+        <h2 class="text-3xl font-bold text-center mb-12">Our Key Performance Indicators</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map(stat => (
+            <StatsCounter 
+              title={stat.title}
+              value={stat.value}
+              description={stat.description}
+            />
+          ))}
+        </div>
+      </div>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">Simplify your staffing needs with our integrated services for all your blue and grey collar staffing requirements across India </span>
-    </Fragment>
+      <!-- Trusted By Section -->
+      <div class="py-16 my-12">
+        <h2 class="text-3xl font-bold text-center mb-12">Trusted by the Best Companies in India</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+          {clientLogos.map(logo => (
+            <ClientLogo name={logo} />
+          ))}
+        </div>
+      </div>
 
-  </Hero>
+      <!-- Services Section -->
+      <div class="py-16 bg-gray-50 dark:bg-gray-900 -mx-8 px-8 my-12" id="services">
+        <h2 class="text-3xl font-bold text-center mb-4">What We Offer</h2>
+        <p class="text-xl text-center max-w-3xl mx-auto mb-12">
+          Experience a comprehensive suite of staffing solutions tailored to meet your unique workforce needs across industries and geographies.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map(service => (
+            <ServiceCard
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              link={service.link}
+            />
+          ))}
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="/services" class="btn-secondary inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-bold py-3 px-6 rounded-lg border border-blue-600 dark:border-blue-400 transition duration-300">
+            Explore All Services
+          </a>
+        </div>
+      </div>
 
-  <Stats
-  />
+      <!-- Why Choose Us Section -->
+      <div class="py-16 my-12">
+        <h2 class="text-3xl font-bold text-center mb-4">Why Customers Choose Us</h2>
+        <p class="text-xl text-center max-w-3xl mx-auto mb-12">
+          A collaborative partnership that fuels growth and drives mutual success with transparent pricing and excellent service.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold mb-4">High Customer Satisfaction</h3>
+            <p>
+              80% of our customers have partnered with us for over 5 years, and 95% renew annually, a testament to our dedication to client satisfaction.
+            </p>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold mb-4">Cost Efficient</h3>
+            <p>
+              Save up to 10% with transparent pricing: No surprises, just superior value with full compliance to all regulatory requirements.
+            </p>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold mb-4">Solutions Focused Approach</h3>
+            <p>
+              Customized solutions. Adaptable procedures. Constant feedback. Our commitment to exceeding your expectations at every step.
+            </p>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold mb-4">Sound Financials</h3>
+            <p>
+              100% timely payments = 70% lower attrition + 0 compliance issues: A win-win for everyone in the staffing ecosystem.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="/whyus" class="btn-secondary inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-bold py-3 px-6 rounded-lg border border-blue-600 dark:border-blue-400 transition duration-300">
+            Why Us
+          </a>
+        </div>
+      </div>
 
-  <!-- Note Widget ******************* -->
+      <!-- Testimonials Section -->
+      <div class="py-16 bg-gray-50 dark:bg-gray-900 -mx-8 px-8 my-12">
+        <h2 class="text-3xl font-bold text-center mb-4">What Our Customers Say</h2>
+        <p class="text-xl text-center max-w-3xl mx-auto mb-12">
+          Discover what customers have to say about their experiences working with us across different industries.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map(testimonial => (
+            <TestimonialCard
+              quote={testimonial.quote}
+              author={testimonial.author}
+              position={testimonial.position}
+              company={testimonial.company}
+              industry={testimonial.industry}
+            />
+          ))}
+        </div>
+      </div>
 
-  <div class=" py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <h2 class="mb-4 text-center text-2xl font-bold md:mb-8 lg:text-3xl">Trusted by the best</h2>   
-          <Image class="mx-auto" src={Customers} alt="Knighthood Customers" width="800" height="600" decoding="async" />
-      
-    
+      <!-- How It Works Section -->
+      <div class="py-16 my-12">
+        <h2 class="text-3xl font-bold text-center mb-4">Working With Us Is Simple</h2>
+        <p class="text-xl text-center max-w-3xl mx-auto mb-12">
+          Streamlined staffing services that empower your business to hit the ground running with our proven four-step process.
+        </p>
+        
+        <div>
+          <div class="timeline-item flex flex-col md:flex-row items-start gap-6 mb-12">
+            <div class="timeline-icon flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">1</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Schedule A Call</h3>
+              <p>Talk with us to understand how we can streamline your staffing process and address your specific requirements.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item flex flex-col md:flex-row items-start gap-6 mb-12">
+            <div class="timeline-icon flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">2</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Service Proposal</h3>
+              <p>Expect a tailored service proposal outlining our solutions to meet your specific staffing requirements within 48 hours.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item flex flex-col md:flex-row items-start gap-6 mb-12">
+            <div class="timeline-icon flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">3</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Price Proposal</h3>
+              <p>Upon acceptance of our service proposal, we will promptly provide our detailed pricing breakdown with transparent cost structure.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item flex flex-col md:flex-row items-start gap-6">
+            <div class="timeline-icon flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">4</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Deployment Commences</h3>
+              <p>Once terms are agreed, we rapidly mobilize our resources to implement the solution according to your timeline and specifications.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="/contact" class="btn-secondary inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-bold py-3 px-6 rounded-lg border border-blue-600 dark:border-blue-400 transition duration-300">
+            Get Started Today
+          </a>
+        </div>
+      </div>
+
+      <!-- FAQ Section with Schema -->
+      <div class="py-16 bg-gray-50 dark:bg-gray-900 -mx-8 px-8 my-12">
+        <h2 class="text-3xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+        <p class="text-xl text-center max-w-3xl mx-auto mb-12">
+          Get answers to common questions about our security and staffing services.
+        </p>
+        
+        <div class="max-w-3xl mx-auto">
+          <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            {faqs.map(faq => (
+              <FAQItem
+                question={faq.question}
+                answer={faq.answer}
+              />
+            ))}
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="/services/security/FAQ-Guard" class="btn-secondary inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-bold py-3 px-6 rounded-lg border border-blue-600 dark:border-blue-400 transition duration-300">
+            View All FAQs
+          </a>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="py-16 bg-blue-600 text-white -mx-8 px-8 my-12">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold mb-6">Ready to Simplify Your Staffing Process?</h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Connect with us to see how we can help you with your Security and Staffing needs for your Business across India.
+          </p>
+          <a href="/contact" class="btn-white inline-block bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-6 rounded-lg transition duration-300">
+            Schedule a Free Consultation
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-<!-- Stats Widget ****************** -->
+  </section>
 
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="services"
-    tagline="Services"
-    title="What we Offer"
-    subtitle="Experience a comprehensive suite of staffing solutions tailored to meet your unique workforce needs."
-    items={[
-      {
-        title: 'Security Services',
-        description:
-          'Specialised Guarding and Tech enabled Security Solutions designed to meet your needs.',
-        icon: 'tabler:home-shield',
+  <!-- Schema.org Organization Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Knighthood",
+      "url": "https://knighthood.co",
+      "logo": "https://knighthood.co/images/logo.png",
+      "description": "Security, Facility and Staffing Solutions across India",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "India"
       },
-      {
-        title: 'Facility Management',
-        description:
-          'Ensuring proper functioning of business facilities everyday',
-        icon: 'tabler:wash-off',
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-XXXXXXXXXX",
+        "contactType": "customer service"
       },
-      {
-        title: 'Staffing Solutions',
-        description:
-          'Ensuring your Contractual Workforce meets your business goals.',
-        icon: 'tabler:friends',
-      },
-      {
-        title: 'Payroll Solutions',
-        description:
-          'Complete Employee lifecycle management',
-        icon: 'tabler:cash',
-      },
-      {
-        title: 'Empployee Verifications Solutions',
-        description:
-          "Comprehensive profiling and screening of potential hires.",
-        icon: 'tabler:zoom-check',
-      },
-      {
-        title: 'Business Solutions',
-        description:
-          'Complete Suite of Services for Startups & MSME.',
-        icon: 'tabler:rocket',
-      },
-    ]}
-  />
-  <center>
-    <button class="btn btn-active">
-            <a href="/services">
-        Explore Our Services
-      </a>
-    </button>
-  </center>
-
-  <!-- Content Widget **************** -->
-  <Features
-  id="Why Choose Us"
-  tagline="Why Us"
-  title="Why Customers Choose Us"
-  ></Features>
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'High Customer Satisfaction',
-        description:
-          '80% of our customers have partnered with us for over 5 years, and 95% renew annually, a testament to our dedication to client satisfaction.',
-      },
-      {
-        title: 'Cost Efficient',
-        description:
-          'Save up to 10% with transparent pricing: No surprises, just superior value.',
-      },
-      {
-        title: 'Solutions Focussed Approach',
-        description:
-          'Customized solutions. Adaptable procedures. Constant feedback. Our commitment to exceeding your expectations at every step.',
-      },
-      {
-        title: 'Sound Financials',
-        description: `100% timely payments = 70% lower attrition + 0 compliance issues: A win-win for everyone.`,
-      },
-      
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1573335553610-a871dfd95bf5?q=80&w=3378&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Success with Knighthood',
-    }}
-  >
-    <Fragment slot="content">A collaborative partnership that fuels growth and drives mutual success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-
-  </Content>
-  <center><button class="btn btn-active"><a href="/whyus"> Why Customers Choose Us</a></a></button></center>
-
-
-  <!-- Steps Widget ****************** -->
-  <Features
-  id="Connect"
-  tagline="Work with Us"
-  title="Interested in Working With us. Connect Now"
-  ></Features>
-
-
-  <Steps
-    title="Streamlined staffing services that empower your business to hit the ground running."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Schedule A Call</span>',
-        description:
-          "Talk with us to understand how we can streamline your staffing process.",
-        icon: 'tabler:phone-incoming',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Service Proposal</em>',
-        description:
-          "Expect a tailored service proposal outlining our solutions to meet your specific staffing requirements.",
-        icon: 'tabler:notes',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Price Proposal</span>',
-        description:
-          'Upon acceptance of our service proposal, we will promptly provide our detailed pricing breakdown.',
-        icon: 'tabler:receipt-rupee',
-      },
-      {
-        title: 'Deployment Commences',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Where We Operate"
-    subtitle="Pan-India staffing solutions for diverse industries."
-    tagline="Sectors"
-    items={[
-      {
-        title: 'Aviation',
-      icon: 'mdi:aeroplane',
-      },
-      {
-        title: 'Banking',
-        
-        icon: 'mdi:bank',
-      },
-      {
-        title: 'Retail',
-        
-        icon: 'mdi:cart-variant',
-      },
-      {
-        title: 'Telecom',
-        
-        icon: 'mdi:radio-tower',
-      },
-      {
-        title: 'Logistics',
-        
-        icon: 'mdi:warehouse',
-      },
-      {
-        title: 'Manufacturing',
-        
-        icon: 'mdi:manufacturing',
-      },
-      {
-        title: 'E-Commerce and Hyper Local',
-        
-        icon: 'mdi:shopping-search',
-      },
-      {
-        title: 'Education',
-        
-        icon: 'mdi:school',
-      },
-      {
-        title: 'Construction',
-        
-        icon: 'mdi:construction',
-      },
-      {
-        title: 'Government',
-        
-        icon: 'mdi:building',
-      },
-      {
-        title: 'Automobile',
-        
-        icon: 'mdi:car',
-      },
-      {
-        title: 'Health Care',
-        
-        icon: 'mdi:hospital',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-  <h2 class="mb-4 text-center text-2xl font-bold md:mb-8 lg:text-3xl">Our Presence Across India</h2>   
-<Cities/>
- 
-  
-<!-- Testimonials Widget *********** -->
-
-<Testimonials
-title="What our Customers Say"
-subtitle="Discover what customers have to say about their experiences working with us."
-testimonials={[
-  {
-    testimonial: `Knighthood provided an outstanding security service even in the most challenging of locations. We were incredibly impressed with the quality of their service and dedication to meeting our needs.`,
-    name: 'Akash Trivedi',
-    job: 'Zonal Head - North (Proconnect Logistics)',
-    image: {
-      src: 'https://i.imgur.com/ffTQQ7L.png',
-      alt: 'Akash Trivedi Image',
-    },
-  },
-  {
-    testimonial: `“When we shifted to Knighthood from a well renowned security player, we were able to save 10% on our costs without any reduction in service quality when it comes to security services. It was a great decision that has paid off for us in the long run.`,
-    name: 'Rajesh Singh',
-    job: 'Operations Head (SpiceXpress)',
-    image: {
-      src: 'https://i.imgur.com/EuQTAqp.png',
-      alt: 'Rajesh Singh Image',
-    },
-  },
-  {
-    testimonial: `We were amazed at the speed of deployment of labour for warehouses across India that Knighthood provided. They were reliable and efficient, surpassing all of our expectations.`,
-    name: 'Ajay Kanwar',
-    job: 'COO (Holisol Logistics)',
-    image: {
-      src: 'https://i.imgur.com/0czCpFs.png',
-      alt: 'Ajay Kanwar Image',
-    },
-  },
-  
-]}
-/>
-
-<LatestBlog/>
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'How much does it cost to hire a security guard in India?',
-        description:
-          "Hiring a security guard in India can cost Rs. 17,000-40,000/month in metropolitan cities, depending on location and event specifics. Research and compare services for the best value. For more details, check out our pricing page",
-      },
-      {
-        title: 'Is your Pricing Fixed throughout the Contract Period ?',
-        description:
-          'Our pricing structure is designed with transparency and compliance in mind. It primarily consists of cost components determined by state and central government regulations, which can vary over time. We diligently monitor these changes and adjust our pricing accordingly to ensure adherence to all applicable laws.',
-      },
-      {
-        title: 'Why are your Prices different when compared to your Competitors ?',
-        description:
-          "Our fair pricing is consistent for similar services and locations. Beware of competitors with unrealistically low rates, which may hide outdated costs or non-compliance risks. We offer competitive pricing aligned with top providers, ensuring savings and peace of mind.",
-      },
-      {
-        title: "Are we liable to pay GST for your services?",
-        description:
-          "Our services fall under the GST gambit and we are liable to charge GST for services rendered by us. Currently we charge 18% GST for all our services. ",
-      },
-      {
-        title: 'Can we avoid Paying Certain Statutory Compliances?',
-        description:
-          "Cutting corners on compliance can be costly and disruptive. We work with you to find budget-friendly solutions that prioritize legal adherence. Our competitive pricing and transparent service ensure your peace of mind without compromising on quality or compliance.",
-      },
-      {
-        title: 'When should I hire a bodyguard?',
-        description:
-          "The answer to this question depends on your security needs and desired level of protection. Generally, people hire bodyguards when they are in a potentially dangerous environment or at risk of attack. Consider your own security requirements before hiring, and make sure you choose the right person for the job.",
-      },
-    ]}
-  />
-
-  
-  <Features3
-    title="Let us know how we can help"
-    subtitle="We’re here to help and answer any question you might have."
-    columns={4}
-    items={[
-      {
-        title: 'Phone',
-        icon: 'tabler:phone',
-        callToAction: {
-          target: '_blank',
-          text: 'Call us',
-          href: '/contact',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Email',
-        icon: 'tabler:mail',
-        callToAction: {
-          target: '_blank',
-          text: 'Write to us',
-          href: 'mailto:support@knighthood.co',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Chat with Us',
-        icon: 'tabler:message-circle',
-        callToAction: {
-          target: '_blank',
-          text: 'Start chatting',
-          href: 'https://wa.me/919911454503',
-          variant: 'link',
-        },
-      },
-      {
-        title: 'Customer Support',
-        icon: 'tabler:ticket',
-        callToAction: {
-          target: '_blank',
-          text: 'Raise a Ticket',
-          href: 'https://airtable.com/embed/applVP0mItmSc4koi/shrvEkFQnN11VZbRY',
-          variant: 'link',
-        },
-      },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Schedule a Call',
-        href: '/contact',
-        target: '_blank',
-        icon: 'tabler:phone-outgoing',
-      },
-    ]}
-  >
-    
-    <Fragment slot="subtitle">
-      Connect with us to see how we can help you in your Security and Staffing needs for your Business.
-    </Fragment>
-  </CallToAction>
+      "sameAs": [
+        "https://www.linkedin.com/company/knighthood",
+        "https://twitter.com/knighthood"
+      ]
+    }
+  </script>
 </Layout>

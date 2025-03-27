@@ -1,0 +1,35 @@
+---
+export interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+
+// Mapping of client names to actual file names (if different)
+const logoMap = {
+  "flipkart": "flipkart.png",
+  "spicejet": "spicejet.png",
+  "gati": "gati.png",
+  "dtdc": "dtdc.png",
+  "bls": "bls.png",
+  "redtape": "redtape.png",
+  "holisol": "holisol.png",
+  "benetton": "benetton.png",
+  "bmw": "bmw.png",
+  "honda": "honda.png",
+  "proconnect": "proconnect.png",
+  "nwcc": "nwcc.png"
+};
+
+const logoFile = logoMap[name] || `${name}.png`;
+const logoPath = `/images/clients/${logoFile}`;
+---
+
+<div class="client-logo flex items-center justify-center h-24 p-4 grayscale hover:grayscale-0 transition-all duration-300">
+  <img 
+    src={logoPath} 
+    alt={`${name} - Client of Knighthood`} 
+    class="max-h-full max-w-full object-contain" 
+    loading="lazy"
+  />
+</div>

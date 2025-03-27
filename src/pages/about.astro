@@ -2,12 +2,36 @@
 import Cities from "~/components/common/Cities.astro"
 
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import StatsCounter from '../components/StatsCounter.astro';
+
+
+const stats = [
+  {
+    title: "5 Year Retention",
+    value: "85%",
+    description: "Customers been with us for over 5 years"
+  },
+  {
+    title: "SLA",
+    value: "99.1%",
+    description: "Across all solutions"
+  },
+  {
+    title: "PSARA License",
+    value: "17",
+    description: "Indian States"
+  },
+  {
+    title: "Associates",
+    value: "30k+",
+    description: "Who have worked with us"
+  }
+];
 
 const metadata = {
   title: 'About us',
@@ -21,7 +45,7 @@ const metadata = {
     tagline="About us"
     image={{
       src: 'https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      alt: 'Caos Image',
+      alt: 'About Knighthood',
     }}
   >
     <Fragment slot="title">
@@ -51,16 +75,18 @@ const metadata = {
   
   <p class="mt-5">Our custom solutions are aligned with our customer's need for productivity for every person deployed, while ensuring all regulations and compliances are met.</p>
   </div>
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Customers', amount: '200+' },
-      { title: 'Cities', amount: '85+' },
-      { title: 'Associates', amount: '10,000+' },
-      { title: 'Psara License', amount: '17 States' },
-      
-    ]}
-  />
+  <div class="py-16 bg-gray-50 dark:bg-gray-900 -mx-8 px-8 my-12">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Key Performance Indicators</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {stats.map(stat => (
+        <StatsCounter 
+          title={stat.title}
+          value={stat.value}
+          description={stat.description}
+        />
+      ))}
+    </div>
+  </div>
 
   <Features
     id="services"
@@ -72,7 +98,7 @@ const metadata = {
         title: 'Security Services',
         description:
           'Specialised Guarding and Tech enabled Security Solutions designed to meet your needs.',
-        icon: 'tabler:home-shield',
+        icon: 'tabler:user-shield',
       },
       {
         title: 'Facility Management',
@@ -106,7 +132,7 @@ const metadata = {
       },
     ]}
   />
-  <center><button class="mx-auto mb-10"><a href="/services" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Explore Our Services</a></a></button></center>
+<center><a href="/services" class="mx-auto btn-white inline-block bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-6 rounded-lg transition duration-300">Explore Our Services</a></center>
 
   <Features2
   title="Where We Operate"

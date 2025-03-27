@@ -1,0 +1,39 @@
+---
+interface Props {
+  as?: string;
+  id?: string;
+  class?: string;
+  sm?: boolean;
+  md?: boolean;
+  lg?: boolean;
+  xl?: boolean;
+  fluid?: boolean;
+}
+
+const {
+  as: Tag = 'div',
+  id,
+  class: className = '',
+  sm,
+  md,
+  lg,
+  xl,
+  fluid,
+} = Astro.props;
+
+const containerClass = fluid 
+  ? 'w-full px-4 sm:px-6 lg:px-8 mx-auto' 
+  : sm 
+    ? 'max-w-4xl mx-auto px-4 sm:px-6'
+    : md 
+      ? 'max-w-5xl mx-auto px-4 sm:px-6'
+      : lg 
+        ? 'max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'
+        : xl 
+          ? 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
+          : 'max-w-6xl mx-auto px-4 sm:px-6 lg:px-8';
+---
+
+<Tag id={id} class:list={[containerClass, className]}>
+  <slot />
+</Tag>

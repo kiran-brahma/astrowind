@@ -1,0 +1,124 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import { headerData, footerData } from '~/navigation';
+
+export interface Props {
+  metadata: {
+    title?: string;
+    description?: string;
+    image?: string;
+    openGraph?: {
+      type?: string;
+      image?: string;
+      title?: string;
+      description?: string;
+    };
+  };
+}
+
+const { metadata } = Astro.props;
+---
+
+<Layout metadata={metadata}>
+  <slot name="header">
+    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+  </slot>
+  
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 py-8 md:py-12">
+    <slot />
+  </div>
+  
+  <slot name="footer">
+    <Footer {...footerData} />
+  </slot>
+</Layout>
+
+<style is:global>
+  /* Improved prose styling */
+  .prose {
+    max-width: 65ch;
+  }
+  
+  /* Better spacing for headings */
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    scroll-margin-top: 80px;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Better link styling */
+  .prose a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+  
+  /* Better code block styling */
+  .prose pre {
+    padding: 1.5rem !important;
+    border-radius: 0.5rem;
+  }
+  
+  /* Better image styling */
+  .prose img {
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+  }
+  
+  /* Better quote styling */
+  .prose blockquote {
+    border-left-color: var(--aw-color-primary, #1e40af);
+    font-style: italic;
+  }
+  
+  /* Better list styling */
+  .prose ul {
+    list-style-type: disc;
+  }
+  
+  .prose ol {
+    list-style-type: decimal;
+  }
+  
+  /* Better table styling */
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .prose th,
+  .prose td {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .dark .prose th,
+  .dark .prose td {
+    border-color: #2d3748;
+  }
+  
+  .prose th {
+    background-color: #f8fafc;
+    font-weight: 600;
+  }
+  
+  .dark .prose th {
+    background-color: #1a202c;
+  }
+  
+  /* Tag styling */
+  .rounded-full {
+    transition: all 0.2s ease;
+  }
+  
+  /* Content container */
+  main {
+    min-height: calc(100vh - 300px);
+  }
+</style>

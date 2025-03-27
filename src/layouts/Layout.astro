@@ -1,54 +1,387 @@
 ---
+// ~/layouts/Layout.astro
 import '~/assets/styles/tailwind.css';
-
-import { I18N } from 'astrowind:config';
-
+import '@fontsource-variable/inter';
 import CommonMeta from '~/components/common/CommonMeta.astro';
 import Favicons from '~/components/Favicons.astro';
-import CustomStyles from '~/components/CustomStyles.astro';
-import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
-import SiteVerification from '~/components/common/SiteVerification.astro';
-import Analytics from '~/components/common/Analytics.astro';
-import BasicScripts from '~/components/common/BasicScripts.astro';
-
-// Comment the line below to disable View Transitions
-import { ViewTransitions } from 'astro:transitions';
-
-
-
+import { UI } from 'astrowind:config';
 
 const { metadata = {} } = Astro.props;
-const { language, textDirection } = I18N;
 ---
 
 <!doctype html>
-<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+<html lang="en" class="2xl:text-[20px]">
   <head>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="3d447f70-3ce0-4312-bf27-4d4370ab82ad"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <CommonMeta />
     <Favicons />
-    <CustomStyles />
-    <ApplyColorMode />
     <Metadata {...metadata} />
-    <SiteVerification />
-    <Analytics />
 
-    <!-- Comment the line below to disable View Transitions -->
-    <ViewTransitions fallback="swap" />
+    <!-- Umami analytics with better loading strategy -->
+    <script 
+      defer 
+      src="https://cloud.umami.is/script.js" 
+      data-website-id="3d447f70-3ce0-4312-bf27-4d4370ab82ad"
+      data-cache="true"
+    ></script>
   </head>
 
-  <body class="antialiased text-default bg-page tracking-tight px-4 sm:px-6">
+  <body class="antialiased text-default bg-page tracking-tight">
     <slot />
 
-    <BasicScripts />
+    <!-- Simplified and optimized script -->
+    <script is:inline define:vars={{ defaultTheme: UI.theme }}>
+      // Prevent duplicate script execution
+      if (window.basic_script) {
+        // Script already loaded
+      } else {
+        window.basic_script = true;
 
-    <style is:global>
-      img {
-        content-visibility: auto;
+        /* --- Theme Handling --- */
+        function applyTheme(theme) {
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+
+        function initTheme() {
+          // Handle theme only mode
+          if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
+            applyTheme(defaultTheme.replace(':only', ''));
+            return;
+          }
+          
+          // Handle user preference or system preference
+          const isDark = localStorage.theme === 'dark' || 
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          
+          applyTheme(isDark ? 'dark' : 'light');
+        }
+        
+        // Initialize theme immediately to prevent flash
+        initTheme();
+
+        /* --- Event Handler Helper --- */
+        function attachEvent(selector, event, fn) {
+          const elements = typeof selector === 'string' 
+            ? document.querySelectorAll(selector) 
+            : selector;
+            
+          if (elements && elements.length) {
+            elements.forEach((elem) => {
+              elem.addEventListener(event, (e) => fn(e, elem), false);
+            });
+          }
+        }
+        
+        /* --- Page Initialization --- */
+        function onLoad() {
+          let lastKnownScrollPosition = window.scrollY;
+          let ticking = false;
+
+          // Close mobile menu when nav items are clicked
+          attachEvent('#header nav a', 'click', function() {
+            document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
+            document.body.classList.remove('overflow-hidden');
+            document.getElementById('header')?.classList.remove('h-screen');
+            document.getElementById('header')?.classList.remove('expanded');
+            document.querySelector('#header nav')?.classList.add('hidden');
+          });
+
+          // Mobile menu toggle
+          attachEvent('[data-aw-toggle-menu]', 'click', function(_, elem) {
+            console.log("Menu button clicked");
+            elem.classList.toggle('expanded');
+            document.body.classList.toggle('overflow-hidden');
+            document.getElementById('header')?.classList.toggle('h-screen');
+            document.getElementById('header')?.classList.toggle('expanded');
+            document.querySelector('#header nav')?.classList.toggle('hidden');
+          });
+
+          // Theme toggle
+          attachEvent('[data-aw-toggle-color-scheme]', 'click', function() {
+            if (defaultTheme.endsWith(':only')) {
+              return;
+            }
+            document.documentElement.classList.toggle('dark');
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+          });
+
+          // Social sharing
+          attachEvent('[data-aw-social-share]', 'click', function(_, elem) {
+            const network = elem.getAttribute('data-aw-social-share');
+            const url = encodeURIComponent(elem.getAttribute('data-aw-url') || window.location.href);
+            const text = encodeURIComponent(elem.getAttribute('data-aw-text') || document.title);
+            
+            const shareUrls = {
+              facebook: `https://www.facebook.com/sharer.php?u=${url}`,
+              twitter: `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
+              linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text}`,
+              whatsapp: `https://wa.me/?text=${text}%20${url}`,
+              mail: `mailto:?subject=%22${text}%22&body=${text}%20${url}`
+            };
+            
+            if (shareUrls[network]) {
+              const newlink = document.createElement('a');
+              newlink.target = '_blank';
+              newlink.href = shareUrls[network];
+              newlink.click();
+            }
+          });
+
+          // Handle screen size changes
+          const screenSize = window.matchMedia('(max-width: 767px)');
+          screenSize.addEventListener('change', function(e) {
+            if (!e.matches) {
+              // Reset mobile menu when screen size increases
+              document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
+              document.body.classList.remove('overflow-hidden');
+              document.getElementById('header')?.classList.remove('h-screen');
+              document.getElementById('header')?.classList.remove('expanded');
+              document.querySelector('#header nav')?.classList.add('hidden');
+            }
+          });
+
+          // Sticky header functionality
+          function applyHeaderStylesOnScroll() {
+            const header = document.querySelector('#header[data-aw-sticky-header]');
+            if (!header) {
+              // Try to find header without the attribute and add it
+              const plainHeader = document.getElementById('header');
+              if (plainHeader) {
+                plainHeader.setAttribute('data-aw-sticky-header', 'true');
+                return applyHeaderStylesOnScroll(); // Try again
+              }
+              return;
+            }
+            
+            if (lastKnownScrollPosition > 60 && !header.classList.contains('scroll')) {
+              header.classList.add('scroll');
+            } else if (lastKnownScrollPosition <= 60 && header.classList.contains('scroll')) {
+              header.classList.remove('scroll');
+            }
+          }
+
+          // Initial header check
+          applyHeaderStylesOnScroll();
+
+          // Scroll event handling for sticky header
+          window.addEventListener('scroll', function() {
+            lastKnownScrollPosition = window.scrollY;
+
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                applyHeaderStylesOnScroll();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          }, { passive: true });
+        }
+
+        /* --- Page Show Handler --- */
+        function onPageShow() {
+          document.documentElement.classList.add('motion-safe:scroll-smooth');
+          
+          // Reset mobile menu state
+          const menuToggle = document.querySelector('[data-aw-toggle-menu]');
+          if (menuToggle) {
+            menuToggle.classList.remove('expanded');
+          }
+          
+          document.body.classList.remove('overflow-hidden');
+          document.getElementById('header')?.classList.remove('h-screen');
+          document.getElementById('header')?.classList.remove('expanded');
+          document.querySelector('#header nav')?.classList.add('hidden');
+        }
+
+        /* --- Set up event handlers --- */
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', onLoad);
+        } else {
+          onLoad();
+        }
+        
+        window.addEventListener('pageshow', onPageShow);
+        
+        /* --- Handle Astro view transitions --- */
+        document.addEventListener('astro:after-swap', () => {
+          initTheme();
+          onLoad();
+          onPageShow();
+        });
       }
-    </style>
+    </script>
   </body>
 </html>
+
+<style is:global>
+  /* Define root variables */
+  :root {
+    /* Font families */
+    --aw-font-sans: 'InterVariable', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --aw-font-serif: var(--aw-font-sans);
+    --aw-font-heading: var(--aw-font-sans);
+    
+    /* Colors - maintaining your original colors */
+    --aw-color-primary: rgb(1 97 239);
+    --aw-color-secondary: rgb(1 84 207);
+    --aw-color-accent: rgb(109 40 217);
+    
+    --aw-color-text-heading: rgb(0 0 0);
+    --aw-color-text-default: rgb(16 16 16);
+    --aw-color-text-muted: rgb(16 16 16 / 66%);
+    
+    --aw-color-bg-page: rgb(255 255 255);
+    
+    /* System properties */
+    color-scheme: light;
+    accent-color: var(--aw-color-accent);
+    
+    /* Selection color */
+    ::selection {
+      background-color: lavender;
+    }
+  }
+
+  .dark {
+    --aw-color-text-heading: rgb(247 248 248);
+    --aw-color-text-default: rgb(229 236 246);
+    --aw-color-text-muted: rgb(229 236 246 / 66%);
+    
+    --aw-color-bg-page: rgb(3 6 32);
+    
+    color-scheme: dark;
+    
+    ::selection {
+      background-color: black;
+      color: snow;
+    }
+  }
+
+  /* Base text elements */
+  html {
+    font-family: var(--aw-font-sans);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    color: var(--aw-color-text-default);
+    background-color: var(--aw-color-bg-page);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Tailwind utility class equivalents */
+  .text-default {
+    color: var(--aw-color-text-default);
+  }
+  
+  .text-muted {
+    color: var(--aw-color-text-muted);
+  }
+  
+  .font-heading {
+    font-family: var(--aw-font-heading);
+  }
+  
+  .bg-page {
+    background-color: var(--aw-color-bg-page); 
+  }
+  
+  .bg-primary {
+    background-color: var(--aw-color-primary);
+  }
+  
+  .text-primary {
+    color: var(--aw-color-primary);
+  }
+
+  /* CSS reset & utilities */
+  img, video, svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Content visibility for better performance */
+  img {
+    content-visibility: auto;
+  }
+
+  /* For any screen reader only elements */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  /* Remove transitions for users who've turned them off */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Mobile menu and header styles */
+  #header[data-aw-sticky-header] {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    transition: all 0.3s ease;
+  }
+  
+  #header[data-aw-sticky-header].scroll {
+    @apply shadow-md;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+  }
+  
+  .dark #header[data-aw-sticky-header].scroll {
+    background-color: rgba(3, 6, 32, 0.9);
+    @apply shadow-md shadow-gray-800;
+  }
+  
+  #header.expanded {
+    @apply h-screen z-40;
+    background-color: var(--aw-color-bg-page);
+  }
+  
+  #header.expanded nav {
+    @apply block pb-12 pt-8;
+    background-color: var(--aw-color-bg-page);
+  }
+
+  /* Dropdown menu styles */
+  .dropdown-menu {
+    @apply hidden;
+  }
+  
+  @media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+      @apply block;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    #header.expanded .dropdown-menu {
+      @apply block pl-4;
+    }
+  }

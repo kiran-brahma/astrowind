@@ -1,0 +1,448 @@
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: date
+        label: Publication Date
+        widget: datetime
+        required: true
+      - name: excerpt
+        label: Excerpt
+        widget: text
+        required: true
+      - name: lastModified
+        label: Last Modified
+        widget: datetime
+        required: false
+      - name: image
+        label: Featured Image
+        widget: image
+        required: true
+      - name: coverAlt
+        label: Image Alt Text
+        widget: string
+        required: false
+      - name: category
+        label: Categories
+        widget: list
+        required: false
+      - name: tags
+        label: Tags
+        widget: list
+        required: true
+      - name: author
+        label: Author
+        widget: string
+        required: false
+      - name: metadata
+        label: Metadata
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - name: title
+            label: Meta Title
+            widget: string
+            required: false
+          - name: image
+            label: Meta Image
+            widget: image
+            required: false
+          - name: ignoreTitleTemplate
+            label: Ignore Title Template
+            widget: boolean
+            required: false
+          - name: canonical
+            label: Canonical URL
+            widget: string
+            required: false
+          - name: description
+            label: Meta Description
+            widget: text
+            required: false
+          - name: robots
+            label: Robots
+            widget: object
+            required: false
+            fields:
+              - name: index
+                label: Index
+                widget: boolean
+                required: false
+              - name: follow
+                label: Follow
+                widget: boolean
+                required: false
+          - name: openGraph
+            label: Open Graph
+            widget: object
+            required: false
+            fields:
+              - name: url
+                label: URL
+                widget: string
+                required: false
+              - name: siteName
+                label: Site Name
+                widget: string
+                required: false
+              - name: locale
+                label: Locale
+                widget: string
+                required: false
+              - name: type
+                label: Type
+                widget: string
+                required: false
+              - name: images
+                label: Images
+                widget: list
+                required: false
+                fields:
+                  - name: url
+                    label: URL
+                    widget: string
+                    required: true
+                  - name: width
+                    label: Width
+                    widget: number
+                    required: false
+                  - name: height
+                    label: Height
+                    widget: number
+                    required: false
+          - name: twitter
+            label: Twitter
+            widget: object
+            required: false
+            fields:
+              - name: handle
+                label: Handle
+                widget: string
+                required: false
+              - name: site
+                label: Site
+                widget: string
+                required: false
+              - name: cardType
+                label: Card Type
+                widget: string
+                required: false
+
+  - name: update
+    label: Updates
+    folder: src/content/update
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: date
+        label: Publication Date
+        widget: datetime
+        required: true
+      - name: excerpt
+        label: Excerpt
+        widget: text
+        required: true
+      - name: lastModified
+        label: Last Modified
+        widget: datetime
+        required: false
+      - name: image
+        label: Featured Image
+        widget: image
+        required: true
+      - name: coverAlt
+        label: Image Alt Text
+        widget: string
+        required: false
+      - name: category
+        label: Categories
+        widget: list
+        required: false
+      - name: tags
+        label: Tags
+        widget: list
+        required: false
+      - name: author
+        label: Author
+        widget: string
+        required: false
+      - name: metadata
+        label: Metadata
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - name: title
+            label: Meta Title
+            widget: string
+            required: false
+          - name: image
+            label: Meta Image
+            widget: image
+            required: false
+          - name: ignoreTitleTemplate
+            label: Ignore Title Template
+            widget: boolean
+            required: false
+          - name: canonical
+            label: Canonical URL
+            widget: string
+            required: false
+          - name: description
+            label: Meta Description
+            widget: text
+            required: false
+          - name: robots
+            label: Robots
+            widget: object
+            required: false
+            fields:
+              - name: index
+                label: Index
+                widget: boolean
+                required: false
+              - name: follow
+                label: Follow
+                widget: boolean
+                required: false
+          - name: openGraph
+            label: Open Graph
+            widget: object
+            required: false
+            fields:
+              - name: url
+                label: URL
+                widget: string
+                required: false
+              - name: siteName
+                label: Site Name
+                widget: string
+                required: false
+              - name: locale
+                label: Locale
+                widget: string
+                required: false
+              - name: type
+                label: Type
+                widget: string
+                required: false
+              - name: images
+                label: Images
+                widget: list
+                required: false
+                fields:
+                  - name: url
+                    label: URL
+                    widget: string
+                    required: true
+                  - name: width
+                    label: Width
+                    widget: number
+                    required: false
+                  - name: height
+                    label: Height
+                    widget: number
+                    required: false
+          - name: twitter
+            label: Twitter
+            widget: object
+            required: false
+            fields:
+              - name: handle
+                label: Handle
+                widget: string
+                required: false
+              - name: site
+                label: Site
+                widget: string
+                required: false
+              - name: cardType
+                label: Card Type
+                widget: string
+                required: false
+
+  - name: marketing
+    label: Marketing Pages
+    folder: src/content/marketing
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: date
+        label: Publication Date
+        widget: datetime
+        required: false
+      - name: updateDate
+        label: Update Date
+        widget: datetime
+        required: false
+      - name: excerpt
+        label: Excerpt
+        widget: text
+        required: false
+      - name: image
+        label: Featured Image
+        widget: image
+        required: false
+      - name: metadata
+        label: Metadata
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - name: title
+            label: Meta Title
+            widget: string
+            required: false
+          - name: image
+            label: Meta Image
+            widget: image
+            required: false
+          - name: ignoreTitleTemplate
+            label: Ignore Title Template
+            widget: boolean
+            required: false
+          - name: canonical
+            label: Canonical URL
+            widget: string
+            required: false
+          - name: description
+            label: Meta Description
+            widget: text
+            required: false
+          - name: robots
+            label: Robots
+            widget: object
+            required: false
+            fields:
+              - name: index
+                label: Index
+                widget: boolean
+                required: false
+              - name: follow
+                label: Follow
+                widget: boolean
+                required: false
+          - name: openGraph
+            label: Open Graph
+            widget: object
+            required: false
+            fields:
+              - name: url
+                label: URL
+                widget: string
+                required: false
+              - name: siteName
+                label: Site Name
+                widget: string
+                required: false
+              - name: locale
+                label: Locale
+                widget: string
+                required: false
+              - name: type
+                label: Type
+                widget: string
+                required: false
+              - name: images
+                label: Images
+                widget: list
+                required: false
+                fields:
+                  - name: url
+                    label: URL
+                    widget: string
+                    required: true
+                  - name: width
+                    label: Width
+                    widget: number
+                    required: false
+                  - name: height
+                    label: Height
+                    widget: number
+                    required: false
+          - name: twitter
+            label: Twitter
+            widget: object
+            required: false
+            fields:
+              - name: handle
+                label: Handle
+                widget: string
+                required: false
+              - name: site
+                label: Site
+                widget: string
+                required: false
+              - name: cardType
+                label: Card Type
+                widget: string
+                required: false
+
+  - name: docs
+    label: Documentation
+    folder: src/content/docs
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: description
+        label: Description
+        widget: text
+        required: false
+      - name: sidebar
+        label: Sidebar Configuration
+        widget: object
+        required: false
+        fields:
+          - name: label
+            label: Sidebar Label
+            widget: string
+            required: false
+          - name: order
+            label: Order
+            widget: number
+            required: false
+      - name: hero
+        label: Hero Section
+        widget: object
+        required: false
+        fields:
+          - name: title
+            label: Hero Title
+            widget: string
+            required: false
+          - name: tagline
+            label: Hero Tagline
+            widget: string
+            required: false
+          - name: image
+            label: Hero Image
+            widget: image
+            required: false
+      - name: lastUpdated
+        label: Last Updated Date
+        widget: datetime
+        required: false
+      - name: body
+        label: Content
+        widget: markdown
+        required: true

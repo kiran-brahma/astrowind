@@ -4,7 +4,6 @@ import starlight from '@astrojs/starlight';
 import vercel from '@astrojs/vercel';
 import compress from 'astro-compress';
 import pagefind from "astro-pagefind";
-import keystatic from '@keystatic/astro'
 import markdoc from '@astrojs/markdoc'
 
 

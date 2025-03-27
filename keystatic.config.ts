@@ -84,7 +84,10 @@ const createSlugField = () => fields.slug({
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: 'cloud',
+  },
+  cloud: {
+    project: 'blog/astrowind',
   },
 
   ui: {

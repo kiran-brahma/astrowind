@@ -36,7 +36,7 @@ const blog = defineCollection({
     title: z.string(),
     date: z.date(),
     excerpt: z.string(),
-    lastModified: z.string().optional(),
+    lastModified: z.date().optional(),
     image: z.string(),
     coverAlt: z.string().optional(),
     category: z.array(z.string()).optional(),

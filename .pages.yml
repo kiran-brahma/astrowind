@@ -30,7 +30,7 @@ content:
         label: Image Alt Text
         type: string
         required: false
-      - name: tag
+      - name: tags
         label: Tag
         type: select
         options:

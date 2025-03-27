@@ -34,7 +34,8 @@ content:
         label: Tag
         type: select
         options:
-          values: [ Security, Facility Management, Staffing, Payroll, Verification ]
+          multiple: true
+          values: [ Security, Facility Management, Staffing, Payroll, Verification, Guides, Advice, Lessons,  Learnings, AI, Remote Monitoring ]
       - name: body
         label: Content
         type: rich-text

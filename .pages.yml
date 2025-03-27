@@ -1,0 +1,141 @@
+media:
+  input: src/assets/images
+  output: /assets/images
+
+content:
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: 'src/content/blog'
+    view:
+      fields: [title, date, image, tags]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Publication Date
+        type: date
+      - name: excerpt
+        label: Excerpt
+        type: string
+      - name: lastModified
+        label: Last Modified
+        type: date
+        required: false
+      - name: image
+        label: Featured Image
+        type: image
+      - name: coverAlt
+        label: Image Alt Text
+        type: string
+        required: false
+      - name: tag
+        label: Tag
+        type: select
+        options:
+          multiple: true
+          values: [ Security, Facility Management, Staffing, Payroll, Verification, Guides, Advice, Lessons,  Learnings, AI, Remote Monitoring ]
+      - name: body
+        label: Content
+        type: rich-text
+    
+  - name: update
+    label: Updates
+    type: collection
+    path: 'src/content/update'
+    view:
+      fields: [title, date, image]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Publication Date
+        type: date
+      - name: excerpt
+        label: Excerpt
+        type: string
+      - name: lastModified
+        label: Last Modified
+        type: date
+        required: false
+      - name: image
+        label: Featured Image
+        type: image
+      - name: coverAlt
+        label: Image Alt Text
+        type: string
+        required: false
+      - name: tags
+        label: Tags
+        type: list
+        required: false
+      - name: body
+        label: Content
+        type: rich-text
+      
+  - name: marketing
+    label: Marketing Pages
+    type: collection
+    path: 'src/content/marketing'
+    view:
+      fields: [title, date, updateDate]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Publication Date
+        type: date
+        required: false
+      - name: updateDate
+        label: Update Date
+        type: date
+        required: false
+      - name: excerpt
+        label: Excerpt
+        type: string
+        required: false
+      - name: image
+        label: Featured Image
+        type: image
+        required: false
+      - name: body
+        label: Content
+        type: rich-text
+      
+  - name: docs
+    label: Documentation
+    type: collection
+    path: 'src/content/docs'
+    view:
+      fields: [title, description]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: string
+        required: false
+      - name: sidebar
+        label: Sidebar Configuration
+        type: object
+        required: false
+        fields:
+          - name: label
+            label: Sidebar Label
+            type: string
+            required: false
+          - name: order
+            label: Order
+            type: number
+            required: false
+      - name: lastUpdated
+        label: Last Updated Date
+        type: date
+        required: false
+      - name: body
+        label: Content
+        type: rich-text

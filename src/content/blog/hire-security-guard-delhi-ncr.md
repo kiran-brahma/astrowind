@@ -2,8 +2,12 @@
 title: Guide to Hiring a Security Guard in New Delhi NCR Region
 date: 2025-02-21
 excerpt: A detailed guide on how to hire security guards in New Delhi NCR
+lastModified: 2025-03-27
 image: https://images.unsplash.com/photo-1582450724147-0ee17201a14c?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-tag: Security
+coverAlt: " Hiring a Security Guard in New Delhi NCR Region"
+tag:
+  - Security
+  - Guides
 ---
 ## Introduction
 
@@ -183,4 +187,4 @@ You can read our guide to understand in more depth on [How to hire Security Gaur
 
 ## Conclusion
 
-<img classname="mx-auto" src="/logo.png" width="100" height="100" alt="Knighthood Logo"> Securing your property in New Delhi requires careful planning and a reliable security partner. Knighthood is committed to providing effective security solutions tailored to your needs. \[Contact us today\](https://knighthood.co/contact) for a free consultation and quote. We are dedicated to delivering peace of mind through professional security services. When you need to Hire Security Guards across New Delhi, Knighthood is your trusted choice. We offer a comprehensive suite of security solutions tailored to the Delhi market.
+<img classname="mx-auto" src="/logo.png" width="100" height="100" alt="Knighthood Logo"> Securing your property in New Delhi requires careful planning and a reliable security partner. Knighthood is committed to providing effective security solutions tailored to your needs. \[Contact us today\]([https://knighthood.co/contact](https://knighthood.co/contact)) for a free consultation and quote. We are dedicated to delivering peace of mind through professional security services. When you need to Hire Security Guards across New Delhi, Knighthood is your trusted choice. We offer a comprehensive suite of security solutions tailored to the Delhi market.

@@ -1,6 +1,6 @@
 media:
   input: src/assets/images
-  output: /media
+  output: /assets/images
 
 content:
   - name: blog

@@ -30,9 +30,11 @@ content:
         label: Image Alt Text
         type: string
         required: false
-      - name: tags
-        label: Tags
-        type: list
+      - name: tag
+        label: Tag
+        type: select
+        options:
+          values: [ Security, Facility Management, Staffing, Payroll, Verification ]
       - name: body
         label: Content
         type: rich-text

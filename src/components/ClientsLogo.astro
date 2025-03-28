@@ -1,35 +1,49 @@
 ---
 export interface Props {
   name: string;
+  url?: string; // Optional URL for client website
 }
 
-const { name } = Astro.props;
+const { name, url } = Astro.props;
 
-// Mapping of client names to actual file names (if different)
+// Mapping of client names to image URLs (using external URLs for all clients)
 const logoMap = {
-  "flipkart": "flipkart.png",
-  "spicejet": "spicejet.png",
-  "gati": "gati.png",
-  "dtdc": "dtdc.png",
-  "bls": "bls.png",
-  "redtape": "redtape.png",
-  "holisol": "holisol.png",
-  "benetton": "benetton.png",
-  "bmw": "bmw.png",
-  "honda": "honda.png",
-  "proconnect": "proconnect.png",
-  "nwcc": "nwcc.png"
+  "flipkart": "https://yt3.googleusercontent.com/V5SG8qholmM1Gyxapc3wLUniFKEnaQnbgACfR4ujMjfZsnRk92i9WHEwuhWJI51oJPpVq3rVRQ=s900-c-k-c0x00ffffff-no-rj",
+  "spicejet": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0Uqynrm5ck04ITB5nOBf6o_CiUMvJHdLlw&s",
+  "gati": "https://i.pinimg.com/736x/d5/af/59/d5af592223cf2bddd86b555b052a5d25.jpg",
+  "dtdc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpo0QMKD2Iqz4JPzAZ-X-A7cpa0Di31_7UCw&s",
+  "bls": "https://upload.wikimedia.org/wikipedia/commons/3/3d/BLS_International_Logo.png",
+  "redtape": "https://i.pinimg.com/736x/ba/bf/e4/babfe4cadba602b742f08cb2cc73cc2f.jpg",
+  "holisol": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSRcKEkRKVzxPSBkymq3YLKUeDhQEVQfHPzQ&s",
+  "bmw": "https://media.licdn.com/dms/image/v2/D5616AQG2jJLoJj8EvA/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1671886627097?e=2147483647&v=beta&t=csJ28mjD9sgkEQFwjs78USuXPJIe15GuD64M2Leiys4",
+  "proconnect": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwTHduSZJaPrNMuHPezRZTqd8NrddRkwidfA&s",
+  "nwcc": "https://media.licdn.com/dms/image/v2/C4E0BAQFh3kDpmRMPzg/company-logo_200_200/company-logo_200_200/0/1631327280346?e=2147483647&v=beta&t=xtmbFa6UqMS4kbOrfNXjlDa2PYqxd-BP2bWXPcbipl0",
+  "bbnl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Bharat_Broadband_Network_logo.png",
+  "benetton": "https://www.ambiencemalls.com/logos/05-42-31am_17-03-2016-UCB.png",
+  "honda": "https://upload.wikimedia.org/wikipedia/commons/3/38/Honda.svg"
 };
 
-const logoFile = logoMap[name] || `${name}.png`;
-const logoPath = `/images/clients/${logoFile}`;
+// Get the logo URL, with a fallback for any missing entries
+const logoSrc = logoMap[name];
+const logoPath = logoSrc || `https://placehold.co/400x200/gray/white?text=${name}`;
 ---
 
 <div class="client-logo flex items-center justify-center h-24 p-4 grayscale hover:grayscale-0 transition-all duration-300">
-  <img 
-    src={logoPath} 
-    alt={`${name} - Client of Knighthood`} 
-    class="max-h-full max-w-full object-contain" 
-    loading="lazy"
-  />
+  {url ? (
+    <a href={url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${name}'s website`}>
+      <img
+        src={logoPath}
+        alt={`${name} - Client of Knighthood`}
+        class="max-h-full max-w-full object-contain"
+        loading="lazy"
+      />
+    </a>
+  ) : (
+    <img
+      src={logoPath}
+      alt={`${name} - Client of Knighthood`}
+      class="max-h-full max-w-full object-contain"
+      loading="lazy"
+    />
+  )}
 </div>

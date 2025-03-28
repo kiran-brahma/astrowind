@@ -1,95 +1,54 @@
 ---
-import Layout from '~/layouts/Layout.astro';
-import Header from '~/components/widgets/Header.astro';
-import Footer from '~/components/widgets/Footer.astro';
-import { headerData, footerData } from '~/navigation';
-import logoImage from '~/assets/favicons/logo.png';
+title: Electronic Security Solutions
+description: Our Electronic Security Solutions for Organisations to ensure complete security 24X7
+layout: 'src/layouts/PageLayout.astro'
 
-export interface Props {
-  frontmatter?: {
-    title?: string;
-    description?: string;
-    image?: string;
-  };
-}
-
-const { frontmatter } = Astro.props;
-
-// Create metadata object for SEO
-const metadata = {
-  title: frontmatter?.title,
-  description: frontmatter?.description,
-  image: frontmatter?.image || logoImage.src,
-};
 ---
 
-<Layout metadata={metadata}>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
-  </slot>
-  
-  <main>
-    <div class="mx-auto max-w-4xl px-4 sm:px-6 py-8 md:py-12">
-      {frontmatter?.title && (
-        <header class="text-center mb-8">
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
-            {frontmatter.title}
-          </h1>
-          
-          {frontmatter.description && (
-            <p class="text-xl text-muted max-w-3xl mx-auto mb-6">
-              {frontmatter.description}
-            </p>
-          )}
-        </header>
-      )}
+import { Image } from 'astro:assets';
 
-      <div class="mx-auto prose-stone prose-lg dark:prose-invert text-black dark:text-white prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg">
-        <slot />
-      </div>
-    </div>
-  </main>
-  
-  <slot name="footer">
-    <Footer {...footerData} />
-  </slot>
-</Layout>
 
-<style>
-  /* Ensure proper spacing on the page */
-  main {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
-  
-  /* Better spacing for headings in content */
-  .prose :global(h1),
-  .prose :global(h2),
-  .prose :global(h3),
-  .prose :global(h4) {
-    scroll-margin-top: 80px;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-  }
-  
-  /* Better link styling */
-  .prose :global(a) {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-    transition: color 0.2s ease;
-  }
-  
-  /* Better code block styling */
-  .prose :global(pre) {
-    padding: 1.5rem !important;
-    border-radius: 0.5rem;
-  }
-  
-  /* Better image styling */
-  .prose :global(img) {
-    border-radius: 0.5rem;
-  }
-</style>
+
+ <div className="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3  sm:grid sm:grid-cols-2  mx-auto">
+<Image 
+src="/screen.png"
+alt="CCTV Suveliance"
+width={250}
+height={250}/>
+<Image 
+src="/mobile.png"
+alt="Remote Monitoring"
+width={250}
+height={250}/>
+<Image 
+src="/video.png"
+alt="Electronic Surveliance"
+width={250}
+height={250}/>
+</div>
+
+
+### Your Intelligent Service Partner
+
+
+
+**Design, Development, Installation and operation management of latest electronic security solutions across your assets**
+
+We will work with you to identify the right mix of Static Guarding along with Electronic Surveillance to ensure optimum service delivery at economical cost
+
+## Service Offerings
+<br></br>
+
+- [Video Analytics](/services/security/ess/video_analytics)
+- [CCTV Access and Intruder Alarm System](/services/security/ess/cctv)
+- [Digitization of Security Records](/services/security/ess/digitize)
+- [Central / Remote Video Monitoring](/services/security/ess/remote)
+- [Motion Sensors](/services/security/ess/sensors)
+
+      
+
+
+
+
+
+

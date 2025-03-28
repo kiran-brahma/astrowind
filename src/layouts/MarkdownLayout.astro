@@ -1,119 +1,113 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import { MetaData } from '~/types';
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import { headerData, footerData } from '~/navigation';
+import logoImage from '~/assets/favicons/logo.png';
 
 export interface Props {
-  frontmatter: {
+  frontmatter?: {
     title?: string;
     description?: string;
     image?: string;
-    publishDate?: string;
-    updateDate?: string;
-    category?: string;
-    tags?: Array<string>;
-    canonical?: string;
-    readingTime?: string;
-    draft?: boolean;
   };
 }
 
 const { frontmatter } = Astro.props;
 
-const metadata: MetaData = {
+// Create metadata object for SEO
+const metadata = {
   title: frontmatter?.title,
   description: frontmatter?.description,
-  image: frontmatter?.image,
-  publishDate: frontmatter?.publishDate,
-  canonical: frontmatter?.canonical,
+  image: frontmatter?.image || logoImage.src,
 };
 ---
 
 <Layout metadata={metadata}>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12">
-    <article>
-      <header class="text-center mb-8 md:mb-12">
-        {
-          frontmatter.category && (
-            <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
-              {frontmatter.category}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <slot name="header">
+    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+  </slot>
+  <main>
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 py-8 md:py-12">
+      {frontmatter?.title && (
+        <header class="text-center mb-8">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 text-black dark:text-white">
+            {frontmatter.title}
+          </h1>
+          {frontmatter.description && (
+            <p class="text-xl text-black dark:text-white max-w-3xl mx-auto mb-6">
+              {frontmatter.description}
             </p>
-          )
-        }
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
-          {frontmatter.title}
-        </h1>
-        <div class="flex flex-wrap justify-center gap-2 md:gap-4">
-          {
-            frontmatter.publishDate && (
-              <span class="text-sm text-muted flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
-                  <path d="M16 3v4"></path>
-                  <path d="M8 3v4"></path>
-                  <path d="M4 11h16"></path>
-                  <path d="M11 15h1"></path>
-                  <path d="M12 15v3"></path>
-                </svg>
-                <time datetime={frontmatter.publishDate}>
-                  {new Date(frontmatter.publishDate).toLocaleDateString('en-us', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric',
-                  })}
-                </time>
-              </span>
-            )
-          }
-          {
-            frontmatter.readingTime && (
-              <span class="text-sm text-muted flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                  <path d="M12 7l0 5l3 3"></path>
-                </svg>
-                {frontmatter.readingTime}
-              </span>
-            )
-          }
-        </div>
-      </header>
-      
-      {
-        frontmatter.image && (
-          <figure class="mb-8 md:mb-12">
-            <img 
-              src={frontmatter.image} 
-              alt={frontmatter.title || 'Featured image'} 
-              class="w-full rounded-lg shadow-md"
-              width="1280"
-              height="640"
-            />
-          </figure>
-        )
-      }
-
-      <div class="prose prose-lg dark:prose-invert mx-auto">
+          )}
+        </header>
+      )}
+      <div class="mx-auto prose prose-black dark:prose-invert max-w-none prose-lg prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg">
         <slot />
       </div>
-
-      {
-        frontmatter.tags && frontmatter.tags.length > 0 && (
-          <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-            <div class="flex flex-wrap gap-2">
-              {frontmatter.tags.map((tag) => (
-                <a
-                  href={`/tag/${tag.toLowerCase()}`}
-                  class="text-sm bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition duration-300"
-                >
-                  #{tag}
-                </a>
-              ))}
-            </div>
-          </div>
-        )
-      }
-    </article>
-  </div>
+    </div>
+  </main>
+  <slot name="footer">
+    <Footer {...footerData} />
+  </slot>
 </Layout>
+
+<style>
+  /* Ensure proper spacing on the page */
+  main {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Better spacing for headings in content */
+  .prose :global(h1),
+  .prose :global(h2),
+  .prose :global(h3),
+  .prose :global(h4) {
+    scroll-margin-top: 80px;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: black;
+  }
+
+  /* Better link styling */
+  .prose :global(a) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+
+  /* Better code block styling */
+  .prose :global(pre) {
+    padding: 1.5rem !important;
+    border-radius: 0.5rem;
+  }
+
+  /* Better image styling */
+  .prose :global(img) {
+    border-radius: 0.5rem;
+  }
+
+  /* Ensure text is black in prose content */
+  .prose :global(p),
+  .prose :global(li),
+  .prose :global(ul),
+  .prose :global(ol),
+  .prose :global(blockquote) {
+    color: black;
+  }
+
+  /* Dark mode handling */
+  :global(.dark) .prose :global(p),
+  :global(.dark) .prose :global(li),
+  :global(.dark) .prose :global(ul),
+  :global(.dark) .prose :global(ol),
+  :global(.dark) .prose :global(blockquote),
+  :global(.dark) .prose :global(h1),
+  :global(.dark) .prose :global(h2),
+  :global(.dark) .prose :global(h3),
+  :global(.dark) .prose :global(h4) {
+    color: white;
+  }
+</style>

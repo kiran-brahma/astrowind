@@ -25,11 +25,9 @@ const { metadata } = Astro.props;
   <slot name="header">
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>
-  
   <div class="mx-auto max-w-4xl px-4 sm:px-6 py-8 md:py-12">
     <slot />
   </div>
-  
   <slot name="footer">
     <Footer {...footerData} />
   </slot>
@@ -39,8 +37,9 @@ const { metadata } = Astro.props;
   /* Improved prose styling */
   .prose {
     max-width: 65ch;
+    color: black !important;
   }
-  
+
   /* Better spacing for headings */
   .prose h1,
   .prose h2,
@@ -49,74 +48,203 @@ const { metadata } = Astro.props;
     scroll-margin-top: 80px;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
+    color: black !important;
+    font-weight: 600;
   }
-  
-  /* Better link styling */
+
+  /* Fix for headings under lists that might appear gray */
+  .prose ul h1,
+  .prose ul h2,
+  .prose ul h3,
+  .prose ul h4,
+  .prose ol h1, 
+  .prose ol h2,
+  .prose ol h3,
+  .prose ol h4 {
+    color: black !important;
+    font-weight: 600;
+  }
+
+  /* Better link styling - make links blue instead of gray */
   .prose a {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
     transition: color 0.2s ease;
+    color: #1e40af !important;
   }
-  
+
+  .prose a:hover {
+    color: #2563eb !important;
+  }
+
+  /* Make all text elements black */
+  .prose p,
+  .prose span,
+  .prose li,
+  .prose blockquote,
+  .prose figcaption {
+    color: black !important;
+  }
+
+  /* Semi-bold list items */
+  .prose ul li,
+  .prose ol li {
+    font-weight: 500;
+    color: black !important;
+  }
+
+  /* Fix gray category labels in lists */
+  .prose li strong, 
+  .prose li em,
+  .prose li b,
+  .prose li i,
+  .prose p strong,
+  .prose p em,
+  .prose p b,
+  .prose p i {
+    color: black !important;
+  }
+
+  /* Target specific gray category labels */
+  .prose li:before {
+    color: black !important;
+  }
+
+  /* Category titles that appear gray */
+  strong, b, em, i {
+    color: black !important;
+  }
+
+  /* Fix for "Residential:", "Commercial:", etc. labels */
+  .prose *[class*="text-gray"],
+  .prose *[class*="text-slate"],
+  .prose *[class*="text-zinc"],
+  .prose *[class*="text-neutral"],
+  .prose *[class*="text-stone"],
+  .prose *[class*="text-cool"] {
+    color: black !important;
+  }
+
+  /* Fix for any potential muted text classes */
+  .text-muted,
+  .text-gray-400,
+  .text-gray-500,
+  .text-slate-400,
+  .text-slate-500,
+  *[class*="text-gray-"],
+  *[class*="text-slate-"],
+  *[class*="text-zinc-"],
+  *[class*="text-neutral-"],
+  *[class*="text-stone-"] {
+    color: black !important;
+  }
+
   /* Better code block styling */
   .prose pre {
     padding: 1.5rem !important;
     border-radius: 0.5rem;
   }
-  
+
   /* Better image styling */
   .prose img {
     border-radius: 0.5rem;
     margin: 2rem auto;
   }
-  
+
   /* Better quote styling */
   .prose blockquote {
     border-left-color: var(--aw-color-primary, #1e40af);
     font-style: italic;
+    color: black !important;
   }
-  
+
   /* Better list styling */
   .prose ul {
     list-style-type: disc;
+    color: black !important;
   }
-  
+
   .prose ol {
     list-style-type: decimal;
+    color: black !important;
   }
-  
+
   /* Better table styling */
   .prose table {
     width: 100%;
     border-collapse: collapse;
   }
-  
+
   .prose th,
   .prose td {
     padding: 0.75rem;
     border: 1px solid #e2e8f0;
+    color: black !important;
   }
-  
+
   .dark .prose th,
   .dark .prose td {
     border-color: #2d3748;
+    color: white !important;
   }
-  
+
   .prose th {
     background-color: #f8fafc;
     font-weight: 600;
+    color: black !important;
   }
-  
+
   .dark .prose th {
     background-color: #1a202c;
+    color: white !important;
   }
-  
+
+  /* Dark mode text handling */
+  .dark .prose,
+  .dark .prose p,
+  .dark .prose span,
+  .dark .prose li,
+  .dark .prose h1,
+  .dark .prose h2,
+  .dark .prose h3,
+  .dark .prose h4,
+  .dark .prose blockquote,
+  .dark .prose figcaption,
+  .dark .prose li strong,
+  .dark .prose li em,
+  .dark .prose li b,
+  .dark .prose li i,
+  .dark .prose p strong,
+  .dark .prose p em,
+  .dark .prose p b,
+  .dark .prose p i,
+  .dark strong, 
+  .dark b, 
+  .dark em, 
+  .dark i,
+  .dark .text-muted,
+  .dark *[class*="text-gray-"],
+  .dark *[class*="text-slate-"],
+  .dark *[class*="text-zinc-"],
+  .dark *[class*="text-neutral-"],
+  .dark *[class*="text-stone-"] {
+    color: white !important;
+  }
+
+  .dark .prose a {
+    color: #60a5fa !important;
+  }
+
+  .dark .prose a:hover {
+    color: #93c5fd !important;
+  }
+
   /* Tag styling */
   .rounded-full {
     transition: all 0.2s ease;
   }
-  
+
   /* Content container */
   main {
     min-height: calc(100vh - 300px);
